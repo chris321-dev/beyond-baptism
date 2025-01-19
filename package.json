@@ -32,7 +32,19 @@
     "rules": {
       "no-unused-vars": "warn",
       "jsx-a11y/anchor-is-valid": "off"
-    }
+    },
+    "overrides": [
+      {
+        "files": ["**/*.js", "**/*.jsx"],
+        "env": {
+          "CI": false
+        },
+        "rules": {
+          "no-console": "warn",
+          "no-unused-vars": "warn"
+        }
+      }
+    ]
   },
   "browserslist": {
     "production": [
@@ -47,6 +59,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-transform-private-property-in-object": "^7.24.7"
+    "@babel/plugin-proposal-private-property-in-object": "^7.24.7"
   }
 }
