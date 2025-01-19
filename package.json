@@ -32,19 +32,7 @@
     "rules": {
       "no-unused-vars": "warn",
       "jsx-a11y/anchor-is-valid": "off"
-    },
-    "overrides": [
-      {
-        "files": ["**/*.js", "**/*.jsx"],
-        "env": {
-          "CI": false
-        },
-        "rules": {
-          "no-console": "warn",
-          "no-unused-vars": "warn"
-        }
-      }
-    ]
+    }
   },
   "browserslist": {
     "production": [
