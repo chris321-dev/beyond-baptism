@@ -1,0 +1,110 @@
+.sec1 {
+  margin-top: 99px;
+  position: relative; /* Needed to position the image */
+  overflow: hidden; /* Ensures the wave image doesn't break the layout */
+}
+
+.sec1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 140px; /* Adjust this to fit the design */
+  background-image: url('../../Assets/Vector2.png'); /* Replace with the actual path to your image */
+  background-size: cover; /* Ensures the image covers the area */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: left bottom; /* Aligns the image to the bottom left */
+  z-index: -1; /* Places it behind the content */
+  max-width: 800px;
+}
+
+/* Other styles remain the same */
+.sec {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  color: #333;
+  margin: 15px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #ff8c00;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #ff8c00;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  max-width: 80%;
+  margin: 15px 0;
+}
+
+.learnMoreBtn {
+  width: auto;
+  max-width: fit-content;
+  display: inline-block;
+  color: var(--whiteColor);
+  margin-top: 15px;
+  border-radius: 0;
+  background-color: #D96B6B !important;
+}
+
+.btn11 {
+  color: var(--whiteColor);
+}
+
+.imagePlaceholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+}
+
+.centeredImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .sec1 {
+    margin-top: 72px;
+  }
+
+  .sec {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    margin-top: 15px;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .imagePlaceholder {
+    display: none;
+  }
+}

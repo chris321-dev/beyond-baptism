@@ -1,0 +1,152 @@
+.services {
+  text-align: center;
+  /* padding: 20px; */
+}
+  
+  .mainHeading {
+    margin-top:150px ;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff8c00;
+    margin-bottom: 5px;
+  }
+  
+  .subHeading {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .servicesCards {
+    display: flex;
+    justify-content: center;
+    gap: 10;
+    flex-wrap:nowrap;
+  }
+  
+  .serviceCard {
+    /* margin: 150px 10px 10px; */
+    width: 300px;
+    /* height: 405px; */
+    border-radius: 20px;
+    overflow: hidden;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+    margin: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .cardBackground {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    padding: 20px;
+  }
+  
+  .quote {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .reference {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .cardContent {
+    height: 180px;
+    padding: 20px;   
+    /* background-color: #f8f8f8; */
+    background-image: url('../../Assets/Marble-texture.webp'); 
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .title {
+    color: #ff8c00;
+    font-weight: bold;
+    margin: 15px 0 10px;
+  }
+  
+  .description {
+    color: #666;
+    font-size: 14px;
+    height: 35px;
+    margin: 20px 0 25px;
+  }
+  
+  .tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+  }
+  
+  .tag1 {
+    background-color: #C2755545;
+    border-radius: 15px;
+    padding: 7px 2px;
+  }
+  
+  .tag {
+    background-color: #F5F5F5;
+    color: #E3701C;
+    padding: 5px 8px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin: 1px 2.5px;
+  }
+  
+  .tagNoBg {
+    color: #E3701C;
+    font-size: 12px;
+    padding: 0 5px;
+  }
+  
+  .arrow {
+    color: #ff8c00;
+    font-size: 16px;
+  }
+
+
+  @media (min-width: 1024px) and (max-width: 1240px) {
+    .tag {
+      padding: 5px 3px;
+    }
+    .cardContent {      
+      padding: 20px 0px;
+    }
+  }
+
+  /* @media (max-width: 1024px) {
+    .mainHeading {
+      margin-top:150px ;
+    }
+  } */
+
+  @media (max-width: 1024px) {
+    .cardBackground {
+      height: 200px;
+  }
+
+  .servicesCards {
+    gap: 20;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainHeading {
+    margin-top:0px ;
+  }
+}

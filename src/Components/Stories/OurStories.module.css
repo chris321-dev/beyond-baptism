@@ -1,0 +1,188 @@
+.services {
+text-align: center;
+/* padding: 20px; */
+}
+
+.mainHeading {
+    /* margin-top:150px ; */
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff8c00;
+    margin-bottom: 10px;
+}
+
+.subHeading {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.lineContainer {
+  display: flex;
+  align-items: center; /* Vertically centers the lines */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.shortLine {
+  width: 10px; /* Adjust for the short line */
+  height: 4px; /* Line thickness */
+  background-color: #EDA460; 
+  margin-right: 12px; /* Spacing between the short and long line */
+  border-radius: 30px; /* Optional: for rounded edges */
+}
+
+.longLine {
+  width: 50px; /* Adjust for the long line */
+  height: 4px; /* Same thickness as the short line */
+  background-color: #EDA460; 
+  border-radius: 30px; /* Optional: for rounded edges */
+}
+
+
+.storyGrid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .storyGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .storyCard {
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imageContainer {
+    flex: 1;
+    min-width: 150px;
+    background-color: #ccc;
+  }
+  
+  .imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .content {
+    flex: 2;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+  }
+  
+  .content h3 {
+    font-size: 1.25rem;
+    margin: 10px 0 0;
+    color: #333;
+  }
+  
+  .content p {
+    font-size: 1rem;
+    color: #666;
+    margin: 20px 0;
+  }
+  
+  /* .readMore {
+    color: #e07a5f;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 0.5rem;
+  } */
+
+  .readMore {
+    color: #DC8419;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    margin: 20px 0;
+  }
+
+  .readMore::after {
+    content: "";
+    display: block;
+    width: 70px; 
+    height: 1px !important; 
+    background-color: #DC8419;
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust spacing between text and underline */
+  }
+  
+  .tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+    /* margin-top: 1rem; */
+    /* flex-wrap: wrap; */
+  }
+
+  .tag1 {
+    background-color: #C2755545;
+    border-radius: 15px;
+    padding: 7px 2px;
+  }
+  
+  /* .tag, .readTime {
+    background: #f4e3d3;
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #333;
+  }
+   */
+
+  
+  .tag, .readTime {
+    background-color: #F5F5F5;
+    color: #E3701C;
+    padding: 5px 8px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin: 1px 2px;
+  }
+  
+  .readTime {
+    display: inline-block;
+    background-color: transparent;
+    word-wrap: break-word; /* Allows wrapping to the next line */
+    overflow-wrap: break-word; /* Provides better compatibility */
+    white-space: normal;
+  }
+  
+  /* .arrow {
+    color: #EA8611;
+    font-size: 16px;
+  } */
+
+  @media (min-width: 768px) and (max-width: 889px) {
+    .readTime {
+        margin-top: 5px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+  }
+
+
+  @media (max-width: 470px) {
+    
+      .imageContainer {
+        display: none;
+      }
+      .lineContainer {
+        margin-bottom: 10px;
+      }
+  }
