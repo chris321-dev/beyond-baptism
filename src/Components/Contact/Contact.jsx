@@ -45,7 +45,7 @@ const Contact = () => {
             <div>
             <div>
               <h4>Phone Number</h4>
-              <p><a href="tel:2010000000">(201) 000-0000</a></p>
+              <p><a href="tel:+19736101346">+1 (973) 610-1346</a></p>
             </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ const Contact = () => {
             </div>
             <div>
               <h4>Email Address</h4>
-              <p><a href="mailto:beyondbaptism123@gmail.com">beyondbaptism123@gmail.com</a></p>
+              <p><a href="mailto:info@beyondbaptism.com">info@beyondbaptism.com</a></p>
             </div>
           </div>
         </div>
