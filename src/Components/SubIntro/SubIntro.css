@@ -69,8 +69,9 @@
   background-color: #D96B6B !important;
 }
 
-.btn11 {
+.learnMoreBtn:hover {
   color: var(--whiteColor);
+  background-color: #d45656 !important;
 }
 
 .imagePlaceholder {
