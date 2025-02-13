@@ -134,15 +134,15 @@ img, video {
   padding-right: 1.5rem;
 }
 
-::-moz-selection {
+/* ::-moz-selection {
   background: var(--primaryColorLight);
-  /* color: var(--primaryColor); */
+  color: var(--primaryColor);
 }
 
 ::selection {
   background: var(--primaryColorLight);
-  /* color: var(--primaryColor); */
-}
+  color: var(--primaryColor);
+} */
 
 /* ::-webkit-scrollbar {
   width: 10px;
