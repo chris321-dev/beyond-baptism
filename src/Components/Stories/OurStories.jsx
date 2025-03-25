@@ -1,93 +1,94 @@
 import React from "react";
-import s from "./OurStories.module.css";
-import Img from "../../Assets/images1.jpeg"
-import Alert from '../Alert/Alert';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, A11y } from "swiper";
 
+// (No need to import CSS in your component since it's loaded from the CDN that's in index.html)
 
-const stories = [
+import styles from "./OurStories.module.css";
+import Img from "../../Assets/images1.jpeg";
+
+// Sample JSON data for the cards
+const latestPostsData = [
   {
+    id: 1,
     title: "The Eucharist & How it Affects You",
-    description: "Learn how one of the most impactful events in the Bible plays a pivotal role in your life.",
-    readTime: "6 min read",
-    categories: ["Catholicism", "Eucharist"],
-    imageUrl: Img,
-    link: "#",
-    altImg: "Story Image"
+    image: Img,
   },
   {
-    title: "The Eucharist & How it Affects You",
-    description: "Learn how one of the most impactful events in the Bible plays a pivotal role in your life.",
-    readTime: "6 min read",
-    categories: ["Catholicism", "Eucharist"],
-    imageUrl: Img,
-    link: "#",
-    altImg: "Story Image"
+    id: 2,
+    title: "The Power of the Eucharist in Daily Life",
+    image: Img,
   },
   {
-    title: "The Eucharist & How it Affects You",
-    description: "Learn how one of the most impactful events in the Bible plays a pivotal role in your life.",
-    readTime: "6 min read",
-    categories: ["Catholicism", "Eucharist"],
-    imageUrl: Img,
-    link: "#",
-    altImg: "Story Image"
+    id: 3,
+    title: "Discovering the Catholic Faith",
+    image: Img,
   },
   {
-    title: "The Eucharist & How it Affects You",
-    description: "Learn how one of the most impactful events in the Bible plays a pivotal role in your life.",
-    readTime: "6 min read",
-    categories: ["Catholicism", "Eucharist"],
-    imageUrl: Img,
-    link: "#",
-    altImg: "Story Image"
+    id: 4,
+    title: "Baptism, Confirmation & Beyond",
+    image: Img,
   },
-  // Add more stories as needed
+  {
+    id: 5,
+    title: "Extra Resources",
+    image: Img,
+  },
 ];
-
-
 
 const OurStories = () => {
   return (
-    <div className='section'>
-    <div className={s.services}>
-      <h2 className={s.mainHeading}>Our Stories</h2>
-      <h3 className={s.subHeading}>Latest Posts</h3>
-      <div className={s.lineContainer}>
-        <span className={s.shortLine}></span>
-        <span className={s.longLine}></span>
-      </div>
-    <div className={s.storyGrid}>
-      {stories.map((story, index) => (
-        <div className={s.storyCard} key={index}>
-          <div className={s.imageContainer}>
-            <img src={story.imageUrl} alt={story.altImg} />
+    <section className={styles.storiesSection}>
+      <div className={styles.storiesContainer}>
+        {/* Left Text Area */}
+        <div className={styles.textArea}>
+          <p className={styles.overline}>OUR STORIES</p>
+          <h2 className={styles.sectionTitle}>Latest Posts</h2>
+          <p className={styles.sectionDescription}>
+            Explore our collection of movies, books, and other resources about Catholicism.
+          </p>
+          <div className={styles.lineContainer}>
+            <span className={styles.shortLine}></span>
+            <span className={styles.longLine}></span>
           </div>
-          <div className={s.content}>
-            <h3>{story.title}</h3>
-            <p>{story.description}</p>
-            {/* <a href={story.link} className={s.readMore}> */}
-            <Alert>
-            <a className={s.readMore}>
-              Read More ↗
-            </a>
-            </Alert>
-            <div className={s.tags}>
-            <div className={s.tag1}>
-              {story.categories.map((category, idx) => (
-                <span key={idx} className={s.tag}>
-                  {category}
-                </span>
-              ))}
-              <span className={s.readTime}>{story.readTime}</span>
-            </div>
-            </div>
-          </div>
-         
         </div>
-      ))}
-    </div>
-    </div>
-    </div>
+
+        {/* Swiper Slider */}
+        <div className={styles.swiperContainer}>
+          <Swiper
+            modules={[Navigation, Pagination, A11y]}
+            navigation
+            pagination={{ clickable: true }}            
+            spaceBetween={10}
+            slidesPerView={3}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              520: {
+                slidesPerView: 2,
+              },
+              720: {
+                slidesPerView: 3,
+              },
+            }}
+            style={{ marginTop: "20px", paddingBottom: "35px", paddingLeft: "30px", paddingRight: "30px", }}
+          >
+            {latestPostsData.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div className={styles.card}>
+                  <div
+                    className={styles.cardImage}
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  ></div>
+                  <p className={styles.cardTitle}>{item.title}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </section>
   );
 };
 
