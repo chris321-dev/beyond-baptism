@@ -1,152 +1,191 @@
+/* Existing styles from your code (unchanged) */
 .services {
   text-align: center;
-  /* padding: 20px; */
+  background: url("../../Assets/imageSun.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 0.2rem;
+  margin-bottom: 10px;
 }
+
+.mainHeading {
+  /* margin-top: 150px; */
+  padding-top: 200px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff8c00;
+  margin-bottom: 10px;
+}
+
+.subHeading {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+
+/* NEW STYLES FOR THE CARDS */
+.servicesCards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  padding: 0px 10px 100px;
+}
+
+/* Card Container */
+.card {
+  background-color: white !important; /* Ensures no transparency */
+  background: url("../../Assets/Marble-texture.webp"); /* White marble-like background */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* So child elements don't spill out */
+  position: relative;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  border: 1px solid #A38900;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Image Wrapper (so we can position the heart icon at the bottom) */
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 220px; /* Adjust as needed */
+  margin-bottom: 10px;
+  overflow: hidden;
   
-  .mainHeading {
-    margin-top:150px ;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff8c00;
-    margin-bottom: 5px;
-  }
+  border-radius: 12px;
+}
+
+/* Card Image */
+.cardImage {
+  width: 100%;
+  height: 100%;
+  padding: 2px 4px;
+  object-fit: cover;
+  display: block;
   
-  .subHeading {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
+  border-radius: 12px;
+}
+
+/* Heart Icon at the bottom of the image */
+.heartIcon {
+  position: absolute;
+  bottom: -10px;
+  right: 50%;
+  transform: translateX(50%);
+  background: #E8E8E8;
+  border-radius: 50%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heartIcon img {
+  width: 24px;
+  height: 24px;
+}
+
+.card:hover .heartIcon {
+  animation: bounce 2.8s infinite;
+}
+
+/* Card Title */
+.cardTitle {
+  font-size: 1.2rem;
+  color: #b27400; /* Some gold-ish color */
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Card Text */
+.cardText {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 15px;  
+  height: 110px;
+}
+
+/* Button */
+.cardBtn {
+  background-color: #b27400;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 2px 20px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: inline-flex;
+  width: 200px;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btnText {
+  align-items: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.cardBtn:hover {
+  background-color: #be8c2d;
+}
+
+/* Arrow icon in the button */
+.arrowIcon {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 1024px) {
   .servicesCards {
-    display: flex;
-    justify-content: center;
-    gap: 10;
-    flex-wrap:nowrap;
-  }
-  
-  .serviceCard {
-    /* margin: 150px 10px 10px; */
-    width: 300px;
-    /* height: 405px; */
-    border-radius: 20px;
-    overflow: hidden;
-    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
-    margin: 10px;
-    background-color: #ffffff;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .cardBackground {
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    border-top-left-radius: 120px;
-    border-top-right-radius: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: white;
-    padding: 20px;
-  }
-  
-  .quote {
-    font-style: italic;
-    font-size: 16px;
-    line-height: 1.4;
-  }
-  
-  .reference {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  
-  .cardContent {
-    height: 180px;
-    padding: 20px;   
-    /* background-color: #f8f8f8; */
-    background-image: url('../../Assets/Marble-texture.webp'); 
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .title {
-    color: #ff8c00;
-    font-weight: bold;
-    margin: 15px 0 10px;
-  }
-  
-  .description {
-    color: #666;
-    font-size: 14px;
-    height: 35px;
-    margin: 20px 0 25px;
-  }
-  
-  .tags {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    gap: 5px;
-  }
-  
-  .tag1 {
-    background-color: #C2755545;
-    border-radius: 15px;
-    padding: 7px 2px;
-  }
-  
-  .tag {
-    background-color: #F5F5F5;
-    color: #E3701C;
-    padding: 5px 8px;
-    border-radius: 15px;
-    font-size: 12px;
-    margin: 1px 2.5px;
-  }
-  
-  .tagNoBg {
-    color: #E3701C;
-    font-size: 12px;
-    padding: 0 5px;
-  }
-  
-  .arrow {
-    color: #ff8c00;
-    font-size: 16px;
-  }
-
-
-  @media (min-width: 1024px) and (max-width: 1240px) {
-    .tag {
-      padding: 5px 3px;
-    }
-    .cardContent {      
-      padding: 20px 0px;
-    }
-  }
-
-  /* @media (max-width: 1024px) {
-    .mainHeading {
-      margin-top:150px ;
-    }
-  } */
-
-  @media (max-width: 1024px) {
-    .cardBackground {
-      height: 200px;
-  }
-
-  .servicesCards {
-    gap: 20;
     flex-wrap: wrap;
   }
+  /* .card {      
+    padding: 20px 0px;
+  } */
 }
 
 @media (max-width: 768px) {
-  .mainHeading {
-    margin-top:0px ;
+  .servicesCards {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10px 20px;
   }
+
+  .mainHeading {
+    padding-top: 0px;
+  }
+
+  .subHeading {
+    margin-bottom: 30px;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+
+  .cardText { 
+    height: auto;
+  }
+}
+
+@media (min-width: 840px) {
+  .services {
+    padding: 3rem 0 2rem;
+  }
+}
+
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(50%) translateY(0);} /* Default position */
+  50% { transform: translateX(50%) translateY(-7px); } /* Move up */
 }
