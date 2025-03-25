@@ -11,30 +11,31 @@ import Alert from '../Alert/Alert';
 const cardsData = [
   {
     icon: "gift", // Use an icon library or replace with a component/image
-    title: "Our Events",
-    description: "We host events every weekend. Join in on the excitement!",
+    title: "Discover Our Mission",
+    description: "Inspiring a deeper love for Christ and the Eucharist through lay-led evangelization.",
+    ctn: "READ MORE",
     tags: ["Catholicism", "Eucharist", "4 min read"],
     link: "#",
   },
   {
     icon: "bell",
-    title: "Our Ministries",
-    description:
-      "Our ministries provide a sensible solution for the people. We are committed to helping others.",
+    title: "Meet Our Team",
+    description: "Passionate Volunteers and Leaders Spreading Eucharistic Renewal",
+    ctn: "EXPLORE",
     tags: ["Catholicism", "Eucharist", "3 min read"],
     link: "#",
   },
   {
     icon: "volume-up",
-    title: "Our Sermons",
-    description:
-      "We preach inspirational sermons on a wide range of themes and topics on the Holy Spirit, Eucharist, Jesus Christ, etc.",
+    title: "Join Our Journey",
+    description: "Join us and experience Eucharistic Miracles in Italy.",
+    ctn: "VIEW MORE",
     tags: ["Catholicism", "Eucharist", "6 min read"],
     link: "#",
   },
 ];
 
-function Card({ icon, title, description, tags, link }) {
+function Card({ icon, title, description, tags, link, ctn }) {
   return (
     <div className={s.card}>
       {/* <div className={`icon ${icon}`}></div> */}
@@ -44,7 +45,7 @@ function Card({ icon, title, description, tags, link }) {
       <Alert>
       {/* <a href={link} className={s.readMore}> */}
       <a className={s.readMore}>
-        READ MORE
+        {ctn}
       </a>
       </Alert>
       <div className={s.tags}>
@@ -71,15 +72,15 @@ const Section1 = () => {
   return (
     <div className={s.sec1}>
     <div className='section container'>
-    <p className={s.subtitle}>JOIN A PARISH GROUP</p>
+    <p className={s.subtitle}>TRANSFORM YOUR PARISH</p>
     <div className={s.sec}>
       <div className={s.content}>
         
         <h1 className={s.title}>
-        Welcome to Beyond Baptism Church! We’d love to connect and share more about our community!
+        Discover the profound mystery of the Eucharist in this inspiring video, “The Veil Removed”.
         </h1>
         <p className={s.description}>
-        Connect with other members through our <span className={s.highlight}>newsletter</span>
+        Special thanks to the <span className={s.highlight}>creators</span> of this impactful film for illuminating the true presence of Christ in the Eucharist.
         </p>
       </div>
       <div className={s.imagePlaceholder}>
