@@ -9,25 +9,19 @@ const AboutUs = () => {
     <div className={s.sec}>
       <div className={s.content}>        
         <h1 className={s.subtitle}>
-        We are taking small steps to teach the importance of the Eucharist
+        We are Deepening Faith and Transforming Lives through the Eucharist.
         </h1>
         <div className={s.underline}>
             <hr/>
         </div>
         <p className={s.description}>
-            The name "Beyond Baptism" emphasizes the ongoing journey of faith and spiritual growth beyond the initial sacrament of Baptism. Through the transformative power of encountering Jesus in the Eucharist, Christians deepen their relationship with Jesus. We experience profound changes in our lives, becoming more closely united with Christ and nourished on our journey of faith.        
+        The name “Beyond Baptism” highlights the continuous journey of faith and spiritual growth that
+        extends beyond the initial sacrament of Baptism. By encountering the transformative power of
+        Jesus in the Eucharist, Catholics deepen their relationship with Him, experience profound
+        personal transformation, and draw closer to Christ, finding nourishment and strength for their
+        ongoing faith journey.      
         </p>
-        <div className={s.offerings}>
-          <p>We offer:</p>
-          <ul className={s.offerList}>                      
-            <li>Spiritual Retreats</li>            
-            <li>Adoration Sessions</li>
-          </ul>
-          <ul className={s.offerList}>          
-            <li>Faith Workshops</li>
-            <li>Prayer Gatherings</li>
-          </ul>
-        </div>
+       
       </div>
       <div className={s.imagePlaceholder}>
       <img src={img} alt="Church" className={s.centeredImage} />
