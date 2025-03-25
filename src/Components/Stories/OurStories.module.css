@@ -1,27 +1,53 @@
-.services {
-text-align: center;
-/* padding: 20px; */
+/* SECTION WRAPPER */
+.storiesSection {
+  background-color: #3f3f3f; /* Dark gray background */
+  color: #fff;
+  padding: 40px 20px;
 }
 
-.mainHeading {
-    /* margin-top:150px ; */
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff8c00;
-    margin-bottom: 10px;
+/* CONTAINER */
+.storiesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.subHeading {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
+/* TEXT AREA */
+.textArea {
+  margin-bottom: 20px;
 }
+
+.overline {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #ff8c00;
+  margin-bottom: 10px;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #fff;
+}
+
+.sectionDescription {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  margin: 15px 0;
+}
+
+/* .orangeLine {
+  width: 40px;
+  height: 3px;
+  background-color: #ff8c00;
+  margin-top: 10px;
+} */
 
 .lineContainer {
   display: flex;
-  align-items: center; /* Vertically centers the lines */
-  justify-content: center;
-  margin-bottom: 20px;
+  align-items: left; /* Vertically centers the lines */
+  justify-content: left;
+  margin-bottom: 40px;
 }
 
 .shortLine {
@@ -39,150 +65,117 @@ text-align: center;
   border-radius: 30px; /* Optional: for rounded edges */
 }
 
+/* SWIPER CONTAINER */
+.swiperContainer {
+  margin-top: 20px;
+}
 
-.storyGrid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-  
-  @media (min-width: 768px) {
-    .storyGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  .storyCard {
-    display: flex;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .imageContainer {
-    flex: 1;
-    min-width: 150px;
-    background-color: #ccc;
-  }
-  
-  .imageContainer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .content {
-    flex: 2;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-  }
-  
-  .content h3 {
-    font-size: 1.25rem;
-    margin: 10px 0 0;
-    color: #333;
-  }
-  
-  .content p {
-    font-size: 1rem;
-    color: #666;
-    margin: 20px 0;
-  }
-  
-  /* .readMore {
-    color: #e07a5f;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 0.5rem;
-  } */
+/* CARD */
+.card {
+  background-color: #4a4a4a;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 300px;  /* Fixed width for large screens */
+  height: 300px; /* Fixed height for large screens */
+}
 
-  .readMore {
-    color: #DC8419;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 14px;
-    position: relative;
-    margin: 20px 0;
-  }
+.cardImage {
+  background-position: center;
+  background-size: cover;
+  flex: 1;
+}
 
-  .readMore::after {
-    content: "";
-    display: block;
-    width: 70px; 
-    height: 1px !important; 
-    background-color: #DC8419;
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Adjust spacing between text and underline */
-  }
-  
-  .tags {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 0.5rem;
-    /* margin-top: 1rem; */
-    /* flex-wrap: wrap; */
-  }
+.cardTitle {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
 
-  .tag1 {
-    background-color: #C2755545;
-    border-radius: 15px;
-    padding: 7px 2px;
+@media (max-width: 1024px) {
+  .card {
+    width: 250px;  /* Fixed width for small screens */
+    height: 300px; /* Fixed height for small screens */
   }
-  
-  /* .tag, .readTime {
-    background: #f4e3d3;
-    padding: 0.3rem 0.6rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    color: #333;
-  }
-   */
+}
 
-  
-  .tag, .readTime {
-    background-color: #F5F5F5;
-    color: #E3701C;
-    padding: 5px 8px;
-    border-radius: 15px;
-    font-size: 12px;
-    margin: 1px 2px;
+@media (max-width: 870px) {
+  .card {
+    width: 220px;  /* Fixed width for small screens */
+    height: 300px; /* Fixed height for small screens */
   }
-  
-  .readTime {
-    display: inline-block;
-    background-color: transparent;
-    word-wrap: break-word; /* Allows wrapping to the next line */
-    overflow-wrap: break-word; /* Provides better compatibility */
-    white-space: normal;
-  }
-  
-  /* .arrow {
-    color: #EA8611;
-    font-size: 16px;
-  } */
+}
 
-  @media (min-width: 768px) and (max-width: 889px) {
-    .readTime {
-        margin-top: 5px;
-        padding-bottom: 0;
-        margin-bottom: 0;
-      }
+/* SMALL SCREENS */
+@media (max-width: 767px) {
+  .card {
+    width: 200px;  /* Fixed width for small screens */
+    height: 250px; /* Fixed height for small screens */
   }
+}
 
 
-  @media (max-width: 470px) {
-    
-      .imageContainer {
-        display: none;
-      }
-      .lineContainer {
-        margin-bottom: 10px;
-      }
+@media (max-width: 520px) { 
+  :global(.swiper) {
+    max-width: 280px;
+    align-content: center;
   }
+  :global(.swiper-button-prev), :global(.swiper-button-next) {
+    --swiper-navigation-size: 20px !important;
+  }
+}
+
+/* --- Swiper Navigation Overrides --- */
+:global(.swiper-button-next) {
+  right: 0px; /* Position to the right outside the slider */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  color: #fff; /* Arrow color */
+  /* background: transparent; */
+  background-color: rgba(131, 130, 130, 0.7);
+  --swiper-navigation-size: 30px;
+}
+
+:global(.swiper-button-prev) {
+  left: 0px; /* Position to the left outside the slider */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  font-size: 1.5rem;
+  color: #fff;
+  /* background: transparent; */
+  background-color: rgba(131, 130, 130, 0.7);
+  --swiper-navigation-size: 30px;
+}
+
+:global(.swiper-button-next):hover,
+:global(.swiper-button-prev):hover {
+  color: #cfcdcd; /* Lighter on hover */
+}
+/* #ff8c00 */
+
+/*hover, #ffa733 */
+
+/* --- Swiper Pagination Overrides --- */
+/* :global(.swiper-pagination) {
+  bottom: -5px !important;
+} */  /* Move pagination down */
+
+:global(.swiper-pagination-bullet) {
+  background: #fff;
+  opacity: 1;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background: #919090;
+}
+
