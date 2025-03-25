@@ -43,9 +43,10 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: bold;
   line-height: 1.2;
+  color: #5B5B5B;
 }
 
 .highlight {
@@ -53,9 +54,9 @@
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 1.08rem;
   color: #666;
-  max-width: 80%;
+  max-width: 100%;
   margin: 15px 0;
 }
 
@@ -67,6 +68,7 @@
   margin-top: 15px;
   border-radius: 0;
   background-color: #D96B6B !important;
+  font-weight: bold;
 }
 
 .learnMoreBtn:hover {
@@ -99,6 +101,7 @@
 
   .title {
     margin-top: 15px;
+    font-size: 2.5rem;
   }
 
   .description {
