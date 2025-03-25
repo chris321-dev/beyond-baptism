@@ -1,10 +1,8 @@
 import React from "react";
-import ServiceCard from "./ServiceCard";
 import s from "./Services.module.css";
 
-import img1 from '../../Assets/img222.png';
 import img2 from '../../Assets/image-4.webp';
-import img3 from '../../Assets/img111.png';
+import img3 from '../../Assets/heartIcon.png';
 import img4 from '../../Assets/image-3.webp';
 import img5 from '../../Assets/image-5.webp';
 
@@ -15,57 +13,84 @@ import img5 from '../../Assets/image-5.webp';
 
 function Services() {
   return (
-    <div className='section services'>
-    <div className={s.services}>
-      <h2 className={s.mainHeading}>Our Services</h2>
-      <h3 className={s.subHeading}>What We Do</h3>
-      <div className={s.servicesCards}>
-        <ServiceCard
-          // imageUrl={img1}
-          initialImageUrl={img1}
-          smallScreenImageUrl={img4}
-          quote="“I am the living bread which came down from heaven...”"
-          reference="— John 6:51-52"
-          title="Connect with us"
-          description="Join our free membership program & learn about the Eucharist"
-          tags={[
-            { type: "tag", text: "Catholicism" },
-            { type: "tag", text: "Eucharist" },
-            { type: "tagNoBg", text: "3 min read" }
-          ]}
-        />
+    <div className='services'>
+  <div className={s.services}>
+    <h2 className={s.mainHeading}>Join the Mission</h2>
+    <p className={s.subHeading}>Share, Serve and Support Beyond Baptism.</p>
 
-        <ServiceCard
-          initialImageUrl={img2}
-          smallScreenImageUrl={img2}
-          quote="“Be the apostle of the divine Eucharist...”"
-          reference="— St. Peter Julian Eymard"
-          title="Become a Volunteer"
-          description="Join us in our journey to help us grow as a parish"
-          tags={[
-            { type: "tag", text: "Catholicism" },
-            { type: "tag", text: "Eucharist" },
-            { type: "tagNoBg", text: "4 min read" }
-          ]}
-        />
-
-        <ServiceCard
-          // imageUrl={img3}
-          initialImageUrl={img3}
-          smallScreenImageUrl={img5}
-          quote="“Then he took the bread, said the blessing, broke it...”"
-          reference="— Luke 22:16-20"
-          title="Donate Today"
-          description="Your support means everything to us"
-          tags={[
-            { type: "tag", text: "Catholicism" },
-            { type: "tag", text: "Eucharist" },
-            { type: "tagNoBg", text: "3 min read" }
-          ]}
-        />
+    <div className={s.servicesCards}>
+      {/* Card 1 */}
+      <div className={s.card}>
+        <div className={s.cardImageWrapper}>
+          <img
+            src={img4}
+            alt="Transform Your Parish"
+            className={s.cardImage}
+          />
+          <div className={s.heartIcon}>
+            <img src={img3} alt="Heart Icon" />
+          </div>
+        </div>
+        <h4 className={s.cardTitle}>Transform Your Parish</h4>
+        <p className={s.cardText}>
+          Discover how we transform your parish through Eucharistic encounters,
+          discipleship, and support for pastors, fostering vocations and a
+          vibrant community.
+        </p>
+        <button className={s.cardBtn}>
+          <span className={s.btnText}> Discover </span>
+          <span className={s.arrowIcon}>↗</span>
+        </button>
       </div>
+
+      {/* Card 2 */}
+      <div className={s.card}>
+        <div className={s.cardImageWrapper}>
+          <img
+            src={img2}
+            alt="Become a Volunteer"
+            className={s.cardImage}
+          />
+          <div className={s.heartIcon}>
+            <img src={img3} alt="Heart Icon" />
+          </div>
+        </div>
+        <h4 className={s.cardTitle}>Become a Volunteer</h4>
+        <p className={s.cardText}>
+          Join us in our journey to help your parish flourish.
+        </p>
+        <button className={s.cardBtn}>
+        <span className={s.btnText}> Volunteer </span>
+          <span className={s.arrowIcon}>↗</span>
+        </button>
+      </div>
+
+      {/* Card 3 */}
+      <div className={s.card}>
+        <div className={s.cardImageWrapper}>
+          <img
+            src={img5}
+            alt="Donate Today"
+            className={s.cardImage}
+          />
+          <div className={s.heartIcon}>
+            <img src={img3} alt="Heart Icon" />
+          </div>
+        </div>
+        <h4 className={s.cardTitle}>Donate Today</h4>
+        <p className={s.cardText}>
+          We provide our services FREE to all parishes. Your support means
+          everything to us.
+        </p>
+        <button className={s.cardBtn}>
+          <span className={s.btnText}> Donate </span>
+          <span className={s.arrowIcon}>↗</span>
+        </button>
       </div>
     </div>
+  </div>
+</div>
+
   );
 }
 
