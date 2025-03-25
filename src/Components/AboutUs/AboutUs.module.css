@@ -22,6 +22,7 @@
   color: #DC8419;
   font-weight: bold;
   text-transform: uppercase;
+  margin-top: 30px;
 }
 
 .subtitle {
@@ -60,29 +61,6 @@
   border-color: #FF920D !important;
 }
 
-.offerings {
-  font-size: 1rem;
-  color: #000000;
-  font-weight: bold;
-}
-
-.offerings p {
-  font-size: 1.1rem;
-  padding-bottom: 10px;
-}
-
-.offerList {
-  list-style: none;
-  padding: 10px;
-  display: flex;
-  gap: 30px 120px;
-}
-
-.offerList li::before {
-  content: "•";
-  color: black;
-  margin-right: 8px;
-}
 
 @media (max-width: 768px) {
   .sec {
@@ -105,10 +83,4 @@
   /* .imagePlaceholder {
       display: none;
   } */
-}
-
-@media (max-width: 500px) {
-  .offerList {
-    gap: 20px
-  }
 }
