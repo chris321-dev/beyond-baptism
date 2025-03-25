@@ -94,20 +94,20 @@
 }
 
 .card:hover .icon {
-  animation: bounce 2s infinite;
+  animation: bounce 2.8s infinite;
 }
 
 /* Placeholder icons using pseudo-elements for illustrative purposes */
 .icon.gift::before {
-  content: "🎁"; /* Gift icon as placeholder */
+  content: url("../../Assets/Mask\ group\ \(2\).webp"); /* Gift icon as placeholder */
 }
 
 .icon.bell::before {
-  content: "🔔"; /* Bell icon as placeholder */
+  content: url("../../Assets/111.png"); /* Bell icon as placeholder */
 }
 
 .icon.volume-up::before {
-  content: "📢"; /* Speaker icon as placeholder */
+  content: url("../../Assets/Mask\ group.webp"); /* Speaker icon as placeholder */
 }
 
 .card h3 {
@@ -146,7 +146,8 @@
 }
 
 .tags {
-  display: flex;
+  /* display: flex; */
+  display: none;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
