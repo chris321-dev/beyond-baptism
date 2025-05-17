@@ -19,6 +19,7 @@ const styles = {
     alignItems: "center",
     backgroundColor: "#f5f5f5",
     textAlign: "center",
+    padding: "5px 20px",
   },
   heading: {
     fontSize: "2rem",
