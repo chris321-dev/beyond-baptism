@@ -1,5 +1,5 @@
 .sec1 {
-  margin-top: 99px;
+  margin-top: 60px;
   position: relative; /* Needed to position the image */
   overflow: hidden; /* Ensures the wave image doesn't break the layout */
 }
@@ -91,9 +91,6 @@
 }
 
 @media (max-width: 768px) {
-  .sec1 {
-    margin-top: 72px;
-  }
 
   .sec {
     grid-template-columns: 1fr;
