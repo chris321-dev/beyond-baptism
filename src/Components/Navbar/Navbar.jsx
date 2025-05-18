@@ -1,112 +1,67 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import './Navbar.css';
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
+import Hero from "./Components/Hero/Hero";
+import SubIntro from "./Components/SubIntro/SubIntro";
+import Section1 from "./Components/Section1/Section1";
+import Services from "./Components/Services/Services";
+import AboutUs from "./Components/AboutUs/AboutUs";
+import Contact from "./Components/Contact/Contact";
+import OurStories from "./Components/Stories/OurStories";
+import Footer from "./Components/FooterR/Footer";
+import BackToTop from "./Components/BackToTop/BackToTop";
+import Preloader from "./Components/Preloader/Preloader";
+import UnderConstruction from "./Components/UnderConstruction/UnderConstruction"; // Import the new page
+import DonateSection from "./Components/DonatePage/DonateSection";
+import About from "./Components/AboutUsPage/About";
+import NotFound from "./Components/NotFound/NotFound";
 
-// Imported Icons
-import { Heart, XCircle, List } from "phosphor-react";
+function App() {
+  const [loading, setLoading] = useState(true); // Track the loading state
 
-import imageLogo from '../../Assets/Beyond-Baptism-Logo-01.webp';
-import icon1 from '../../Assets/USIcon.png';
+  useEffect(() => {
+    // A delay before removing the preloader
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3700);
 
-const Navbar = () => {
-  const location = useLocation();
-  
-  // Determine active section based on URL:
-  let activeSection = 'home';
-  if (location.pathname === '/under-construction') {
-    const params = new URLSearchParams(location.search);
-    activeSection = params.get('section') || 'home';
-  } else if (location.pathname === '/') {
-    activeSection = 'home';
-  }
-  
-  // Local state for the navbar menu open/close
-  const [navBar, setNavBar] = useState("menu");
-
-  // Function to show navbar
-  const showNavBar = () => {
-    setNavBar("menu showNavbar");
-  };
-
-  // Function to remove navbar
-  const removeNavBar = () => {
-    setNavBar("menu");
-  };
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div className="navBar">
-      <div className="logoDiv">
-        <Link to="/" onClick={removeNavBar}>
-          <img src={imageLogo} alt="logo" className="logo1" />
-        </Link>
-      </div>
-
-      <div className={navBar}>
-        <ul>
-          <li className="navList">
-            <Link
-              to="/"
-              className={activeSection === 'home' ? 'active' : ''}
-              onClick={removeNavBar}
-            >
-              Home
-            </Link>
-          </li>
-          <li className="navList">
-            <Link
-              to="/under-construction?section=about"
-              className={activeSection === 'about' ? 'active' : ''}
-              onClick={removeNavBar}
-            >
-              About Us
-            </Link>
-          </li>
-          <li className="navList">
-            <Link
-              to="/under-construction?section=benefits"
-              className={activeSection === 'benefits' ? 'active' : ''}
-              onClick={removeNavBar}
-            >
-              Parish Benefits
-            </Link>
-          </li>
-          <li className="navList">
-            <Link
-              to="/under-construction?section=volunteer"
-              className={activeSection === 'volunteer' ? 'active' : ''}
-              onClick={removeNavBar}
-            >
-              Volunteer
-            </Link>
-          </li>
-        </ul>
-        <XCircle className="icon closeIcon" onClick={removeNavBar} />
-      </div>
-
-      <div>
-        <button className="signUpBtn btn">
-          <Link
-            to="/under-construction?section=volunteer"
-            className="btn11"
-            onClick={removeNavBar}
-          >
-            <Heart size={18} weight="bold" className="Heart" />
-            <span>Give</span>
-          </Link>
-        </button>
-
-        <button style={{ backgroundColor: '#073955' }} className="signUpBtn btn lang">
-          <a href="#" className="btn11 lang">
-            <img src={icon1} alt="icon" className="icon1" />
-            <span> EN </span>
-          </a>
-        </button>
-      </div>
-
-      <List className="icon menuIcon" onClick={showNavBar} />
-    </div>
+    <>
+      {loading ? (
+        <Preloader /> // Shows the Preloader when loading is true
+      ) : (
+        <div>
+          <Navbar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <SubIntro />
+                  <Section1 />
+                  <Services />
+                  <AboutUs />
+                  <Contact />
+                  <OurStories />                  
+                </>
+              }
+            />
+            <Route path="/under-construction" element={<UnderConstruction />} />
+            <Route path="/donate" element={<DonateSection />} />
+            <Route path="/aboutus" element={<About />} />
+            <Route path="*" element={<NotFound />} /> { /* for invalid paths */}
+          </Routes>
+          <Footer />
+          <BackToTop />
+        </div>
+      )}
+    </>
   );
-};
+}
 
-export default Navbar;
-
+export default App;
