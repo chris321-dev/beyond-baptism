@@ -14,7 +14,7 @@ import BackToTop from "./Components/BackToTop/BackToTop";
 import Preloader from "./Components/Preloader/Preloader";
 import UnderConstruction from "./Components/UnderConstruction/UnderConstruction"; // Import the new page
 import DonateSection from "./Components/DonatePage/DonateSection";
-import About from "./Components/AboutUsPage/About";
+// import About from "./Components/AboutUsPage/About";
 import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
@@ -53,7 +53,7 @@ function App() {
             />
             <Route path="/under-construction" element={<UnderConstruction />} />
             <Route path="/donate" element={<DonateSection />} />
-            <Route path="/aboutus" element={<About />} />
+{/*             <Route path="/aboutus" element={<About />} /> */}
             <Route path="*" element={<NotFound />} /> { /* for invalid paths */}
           </Routes>
           <Footer />
