@@ -1,250 +1,172 @@
-@import url("https://font.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900$display=swap");
-:root {
-  --primaryColor: #D17100;
-  --primaryColorLight: #DC8419;
-  --bgColor: hsl(0, 0%, 100%);
-  --formColor: hsl(20, 42%, 87%);
-  --whiteColor: hsl(0, 0%, 100%);
-  --blackColor: hsl(0, 0%, 18%);
-  --greyColor: #FDFDFD9E;
-  --inputColor: hsl(330, 12%, 97%);
-  --cardColor: hsl(300, 3%, 94%);
-  --biggestFontSize: 2.5rem;
-  --h1FontSize: 1.6rem;
-  --h2FontSize: 1.25rem;
-  --h3FontSize: 1rem;
-  --normalFontSize: 0.938rem;
-  --smallFontSize: 0.813rem;
-  --smallestFontSize: 0.75rem;
-  --borderRadius: 50px;
-}
-
-
-.btn11 {
-  display: flex;
-  align-items: center; 
-  gap: 5px; 
-}
-
-.signUpBtn {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: var(--primaryColor);
-  color: var(--whiteColor);
-  border-radius: var(--borderRadius);
-  cursor: pointer;
-}
-
-.signUpBtn .btn11 {
-  color: var(--whiteColor); 
-}
-
-.signUpBtn:hover .Heart {
-  color: #ff0000;
-}
-
-.icon1 {
-  height: 20px;
-  width: 20px;
-}
-
-.btn11:hover {
-  transition: 0.3s ease;
-}
-.lang {
-  cursor:default;
-}
-
-.navList a {
-  color: var(--greyColor);
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-.navList a.active {
-  color: var(--whiteColor) !important;
-}
-.navList a:hover {
-  color: var(--whiteColor);
-}
-
-.navBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* ===== base/header/nav for desktop ===== */
+.header {
+  position: absolute;
+  top: 0;
   width: 100%;
-  height: 100px;
-  /* padding: 1.5rem 0.7rem; */
-  padding: 1.5rem 0.7rem;
-  position: fixed;
-  background: #073955;
-  /* border-bottom: 1.5px solid rgb(211, 211, 211);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px); */
   z-index: 1000;
 }
-.navBar .logoDiv {
+.headerBg { background: #000; }
+.subNav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 20px;
+}
+.subList { display:flex; gap:20px; list-style:none; margin:0; padding:0; }
+.subList a, .lang { color:#fff; font-size:.9rem; text-decoration:none; display: flex; align-items: center;  }
+.subList a:hover { color:#ffffffce}
+.lang img { width:18px; margin-right:4px; }
+.mainNav {
+  display:flex; align-items:center;
+  padding:12px 20px;
+  transition: background-color .3s ease;
+}
+.fixed {
+  position:fixed; top:0; left:0; width:100%;
+  background:rgba(0,0,0,.85); z-index:999;
+}
+.logo img { height:50px; }
+.navList {
+  display:flex; gap:30px; list-style:none;
+  margin:0; padding:0; margin-left:auto; margin-right:20px;
+}
+.navList a { color:#fff; font-size:1rem; text-decoration:none; font-weight: bold; }
+.navList a:hover, .navList a.active { color:#ff8c00; }
+.giveBtn {
+  display:flex; align-items:center; gap:6px;
+  background:#b19124; color:#fff;
+  padding:8px 16px; border-radius:4px;
+  text-decoration:none; font-weight:bold;
+}
+.giveBtn:hover, a.active1 {
+  background: #e2bf4d;
+}
+.underline {
+  height:1px; background:rgba(255,255,255,.4);
+  margin:0 20px;
+}
+
+/* ===== mobile-specific ===== */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* wrap Give+Hamburger, push the whole group right */
+.actions {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.navBar .logoDiv .logo1 {
-  height: 100px;
-  width: 160px;
-  padding: 10px 0;
-}
-@media (max-width: 767px) {
-  .navBar {
-    height: 75px;
-  }
-  .navBar .logoDiv .logo1 {
-    height: 70px;
-    width: 120px;
-  }
-  .navBar .menu {
-    position: absolute;
-    width: 70%;
-    top: -100rem;
-    right: 50%;
-    left: 50%;
-    transform: translate(-50%);
-    background: rgb(7, 57, 85, 0.7); 
-    padding: 2rem;
-    border-radius: 10px;
-    transition: 0.8s ease-in-out;
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
-    box-shadow: 0 1px 1.5px 2px rgba(236, 213, 213, 0.516);
-  }
-  .navBar .menu li {
-    color: var(--blackColor);
-    font-size: var(--h3FontSize);
-    font-weight: 500;
-    padding: 1rem 0;
-    text-align: center;
-    cursor: pointer;
-  }
-  .navBar .menu li:hover {
-    color: var(--primaryColor);
-    border-bottom: 1.5px solid var(--primaryColor);
-  }
-}
-.navBar .menuIcon, .navBar .closeIcon {
-  font-size: 2rem;
-  color: #f5f5f5 !important;
-
-}
-.navBar .menuIcon:hover, .navBar .closeIcon:hover {
-  color: #EA8611 !important;
-}
-.navBar .closeIcon {
-  position: absolute;
-  bottom: -15px;
-  right: 50%;
-  left: 50%;
-  color: var(--blackColor);
-  transform: translate(-50%);
-}
-.navBar .showNavbar {
-  top: 8rem;
+  gap: 10px;
 }
 
-@media (max-width: 400px) {
-  .navBar .logoDiv .logo1 {
-    width: 110px;
-  }
-  .signUpBtn {
-    padding: 6px;
-  }
-  /* .navBar {
-    padding: 0;
-  } */
-  
+
+/* slide‑out sidebar & overlay */
+.overlay {
+  position: fixed; top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+.sidebar {
+  position: fixed; top:0; left:0;
+  height:100%; width: 80%; max-width:300px;
+  background: #282A39;
+  border-radius: 0 24px 24px 0;
+  padding: 20px;
+  z-index: 1001;
+  display: flex; flex-direction: column;
+}
+.sidebarHeader {
+  display: flex; justify-content: space-between; align-items:center;
+}
+.closeBtn {
+  background: none; border:none; cursor:pointer; color:#fff;
+}
+.sidebarLang {
+  display:flex; align-items:center; color:#fff;
+}
+.sidebarLang img { width:18px; margin-right:4px; }
+
+.sidebarSearch {
+  margin: 20px 0;
+}
+.sidebarSearch input {
+  width:100%; padding:10px 15px;
+  border:1px solid rgba(255,255,255,0.4);
+  border-radius:999px;
+  background: transparent;
+  color: #fff;
+}
+.sidebarSearch input::placeholder { color: rgba(255,255,255,0.6); }
+
+.sidebarList {
+  list-style:none; padding:0; margin:0; flex-grow:1;
+  display:flex; flex-direction:column; gap:20px;
+}
+.sidebarList a {
+  display:flex; align-items:center; gap:15px;
+  color:#fff; text-decoration:none; font-size:1rem;
+}
+.sidebarList a:hover { color:#ff8c00; }
+
+.sidebarFooter {
+  border-top:1px solid rgba(255,255,255,0.2);
+  padding-top:20px;
+}
+.sidebarFooter a {
+  display:flex; align-items:center; gap:15px;
+  color:#fff; text-decoration:none; font-size:1rem;
 }
 
-@media (min-width: 768px) {
-  .navBar {
-    padding: 0rem 2rem;
+/* ===== media query breakpoint ===== */
+/* hide desktop items */
+/* @media (max-width: 992px) {
+
+  .subNav,
+  .navList,
+  .giveBtn {
+    display: none !important;
   }
-  .navBar .closeIcon, .navBar .menuIcon {
+  .hamburger {
+    display: block;
+  }
+} */
+
+@media (max-width: 500px) {
+  .showIcon {
     display: none;
   }
-  .navBar .menu ul {
+}
+
+@media (max-width: 992px) {
+  /* only hide the main links, keep subNav visible */
+  .navList {
+    display: none !important;
+  }
+
+  /* make navList disappear, then push actions to the right */
+  .actions {
+    margin-left: auto;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+
+  .subNav {
     display: flex;
-    gap: 1rem;
+    justify-content: flex-end;
+    padding: 8px 10px !important;
+    /*  */
+    background-color: rgb(21, 25, 34);
   }
-  .navBar .menu ul li {
-    font-size: var(--h3FontSize);
-    font-weight: 500;
-    padding: 0.5rem 0;
-    text-align: center;
-    cursor: pointer;
-  }
-  .navBar .menu ul li:hover {
-    color: var(--greyColor);
-    border-bottom: 1.5px solid var(--greyColor);
-  }
-}
-@media (min-width: 1240px) {
-  .navBar {
-    padding: 0.2rem 6rem;
-  }
-  .navBar .menu ul {
-    gap: 4rem;
-  }
-}
-@media (min-width: 1440px) {
-  .navBar {
-    padding: 0.2rem 14rem;
-  }
-}
 
 
-
-
-.alertOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.alertBox {
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.alertBox p {
-  font-size: 16px;
-  color: #DC8419;
-}
-
-.alertButton {
-  margin-top: 10px;
-  padding: 7px 17px;
-  background-color: #DC8419;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  /* ensure giveBtn stays visible on mobile */
+  /* .giveBtn {
+    display: flex !important;
+  } */
 }
