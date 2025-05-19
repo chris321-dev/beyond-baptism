@@ -78,7 +78,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/aboutus?section=about"
+              to="/under-construction?section=about"
               className={active==='about'?styles.active:''}
             >
               About us
