@@ -1,0 +1,202 @@
+.donateSection {
+    margin-top: 70px;
+    padding: 60px 20px;
+    background-color: #fff;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #111;
+    margin: 0;
+    text-align: start;
+  }
+  
+  .highlight {
+    background: linear-gradient(to right, #ff8c00, #ffb400);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .text {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 500px;
+    margin: 0;    
+    line-height: 1.3;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .primaryBtn {
+    padding: 12px 24px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.05rem;
+  }
+
+  .primaryBtn:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .secondaryBtn {
+    padding: 12px 24px;
+    background-color: #eee;
+    color: #111;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.05rem;
+  }
+  
+  .imageWrapper {
+    text-align: right;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+
+  /* Donate Infor Section */
+
+  .donateInfo {
+    position: relative;
+    padding: 60px 20px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;  
+  }
+  
+  .donateInfo img {
+    position: absolute;
+    width: 40px;
+    opacity: 0.5;
+  }
+  
+  .iconTopLeft {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .iconTopRight {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .iconBottomLeft {
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .iconBottomRight {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .infoTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .infoText {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;    
+    line-height: 1.6;
+  }
+
+  /*  */
+
+  .wrapper {
+    position: relative;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-style: italic;
+    color: #333;
+    line-height: 1.3;
+    font-size: 1.1rem;
+  }
+  
+  .text {
+    margin-top: 1rem;    
+    line-height: 1.6;
+  }
+  
+  .bold {
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  .ref {
+    margin-top: 1.3rem;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.1rem;
+  }
+  
+  .quoteIconLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+  }
+  
+  .quoteIconRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ccc;
+  }
+  
+
+
+  
+  /* Responsive: stack on smaller screens */
+  @media (max-width: 768px) {
+    .title {
+      text-align: center;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .imageWrapper {
+      order: -1; /* show image above content on mobile */
+      text-align: center;
+    }
+    .buttons {
+      justify-content: center;
+    }
+  }
+  

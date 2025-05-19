@@ -1,0 +1,85 @@
+.gratitudeSection {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+/* Three-column grid on large, single column on small */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.cardDesc {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  max-width: 300px;
+  /* height: 130px; */
+}
+
+/* Placeholder for images */
+.imagePlaceholder {
+  width: 100%;
+  height: 200px;
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .cardDesc {
+    height: 130px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardDesc {
+    height: 110px;
+    margin-bottom: 5px;
+  }
+}
+
+/* Hide images on screens under 768px */
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .imagePlaceholder {
+    display: none;
+  }
+}

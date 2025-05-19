@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.toggleWrapper span {
+  font-size: 1.1rem;
+  transition: font-weight 0.2s;
+  color: #838282;
+}
+
+.activeLabel {
+  font-weight: bold;
+  color: #000 !important;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin: 0 0.75rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #777777;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #333;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.grid {
+  display: grid;
+  /* width: 100%; */
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.planButton {
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 130px;
+  height: 70px;
+}
+
+.planButton:hover {
+  background-color: #b1b0b0;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.5),
+              -5px -5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.selected {
+  background-color: #999898;
+  font-weight: bold;
+  color: white;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.5),
+              -5px -5px 15px rgba(255, 255, 255, 0.3);
+            
+}
+
+.subLabel {
+  margin-top: 17px;
+  font-size: 0.85rem;
+  color: #555;
+  background-color: #e0e0e0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.error {
+  color: red;
+  margin-bottom: 0.75rem;
+}
+
+.continueButton {
+  padding: 0.75rem 2rem;
+  margin-top: 20px;
+  background-color: #333;
+  color: white;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.continueButton:hover {
+  background-color: #525151;
+}
+
+.continueButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
