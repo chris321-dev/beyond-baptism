@@ -1,154 +1,69 @@
-@import url("https://font.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900$display=swap");
-:root {
-  --primaryColor: #D17100;
-  --primaryColorLight: #DC8419;
-  --bgColor: hsl(0, 0%, 100%);
-  --formColor: hsl(20, 42%, 87%);
-  --whiteColor: hsl(0, 0%, 100%);
-  --blackColor: hsl(0, 0%, 18%);
-  --greyColor: #FDFDFD9E;
-  --inputColor: hsl(330, 12%, 97%);
-  --cardColor: hsl(300, 3%, 94%);
-  --biggestFontSize: 2.5rem;
-  --h1FontSize: 1.6rem;
-  --h2FontSize: 1.25rem;
-  --h3FontSize: 1rem;
-  --normalFontSize: 0.938rem;
-  --smallFontSize: 0.813rem;
-  --smallestFontSize: 0.75rem;
-  --borderRadius: 50px;
-}
-
-
-
-.hero-section {
+.hero {
   position: relative;
-  top: 99px;
-  height: 75vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 97vh;
   background-size: cover;
   background-position: center;
-  color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;    /* push content to the left */
+  padding-left: 80px;   /* add whatever left‐offset you want */
+  bottom: 7px;
 }
-
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('../../Assets/image\ 202.png');
+  background-size: cover;
+  background-position: center;
+  /* optionally blend with a color */
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
 }
-
-.hero-content h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.content {
+  position: relative;
+  max-width: 600px;
+  text-align: left;
+  color: #fff;
 }
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.sub {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #eee;
 }
-
-.svg-arrow {
-  margin-bottom: 1rem;
+.title {
+  font-size: 2.5rem;
+  margin: 10px 0;
 }
-
-.join-btn {
-  padding: 10px 20px;
-  background-color: var(--primaryColor);
-  color: var(--whiteColor);
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: var(--borderRadius);
+.text {
+  font-size: 1.1rem;
 }
-
-.join-btn:hover {
-  background-color: var(--primaryColorLight);
-}
-
-.navigation button {
+.navArrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  color: var(--whiteColor);
-  font-size: 2rem;
-  border: none;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  padding: 10px;
+  z-index: 2;
+  filter: invert(1);
 }
-
-.prev-btn {
+.prev {
   left: 20px;
 }
-
-.next-btn {
+.next {
   right: 20px;
 }
 
-.prev-btn:hover, .next-btn:hover {
-  color: var(--primaryColor);
-}
-
-/* Segmented Animated Progress Bar */
-.progress-bar {
-  display: flex;
-  gap: 5px;
-  position: absolute;
-  bottom: 20px;
-}
-
-.progress-segment {
-  width: 60px; 
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.3);
-  overflow: hidden;
-  position: relative;
-}
-
-.progress-segment.active::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--greyColor); 
-  animation: fillProgress 7s linear forwards; /* Animation for the active dash */
-}
-
-/* Keyframe for filling progress segment */
-@keyframes fillProgress {
-  from {
-    transform: translateX(-100%);
+@media (max-width: 992px) {
+  .content {
+    text-align: center !important;
+    max-width: 100%;
   }
-  to {
-    transform: translateX(0);
+  .navArrow {
+    display: none;
   }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    top: 72px;
+  .hero {
+    justify-content: center !important;
+    padding: 40px 20px;
+    height: auto;
+    min-height: 95vh;
   }
-  .hero-content h1 {
-    font-size: 1.5rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
-  .join-btn {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-}
+} 
