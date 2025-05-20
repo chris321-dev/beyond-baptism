@@ -17,6 +17,7 @@ export default function PricingToggle() {
 
   const handleToggle = () => {
     setBillingOnce(prev => !prev);
+    setSelectedPlan(null); // This line resets the selection
     setError('');
   };
 
