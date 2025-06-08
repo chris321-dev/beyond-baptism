@@ -1,0 +1,31 @@
+.aboutSection {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 40px auto;        /* Centers the content and adds top/bottom space */
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Optional: Add spacing between paragraphs */
+  .aboutSection p {
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .line1 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color:#333;
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 16px;
+    }
+  }
+  

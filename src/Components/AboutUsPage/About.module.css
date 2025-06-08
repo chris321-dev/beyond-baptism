@@ -1,0 +1,177 @@
+/* About.module.css */
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 40px 20px;
+  margin-top: 100px;
+} */
+
+.AboutSection {
+  margin-top: 70px;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111;
+  margin: 0;
+  text-align: start;
+}
+
+.highlight {
+  background: linear-gradient(to right, #ff8c00, #ffb400);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 500px;
+  margin: 0;    
+  line-height: 1.3;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.primaryBtn {
+  padding: 12px 24px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+.primaryBtn:hover {
+  background-color: #3a3a3a;
+}
+
+.secondaryBtn:hover {
+  background-color: #ccc;
+}
+
+.secondaryBtn {
+  padding: 12px 24px;
+  background-color: #eee;
+  color: #111;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+.imageWrapper {
+  text-align: right;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+
+/* === Slider section === */
+.slider {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.pager {
+  font-size: 1.1rem;
+  color: #888;
+  margin-bottom: 12px;
+}
+.current {
+  font-weight: bold;
+}
+.slideTitle {
+  font-size: 2rem;
+  margin: 8px 0 16px;
+}
+.slideBody {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  padding: 0 20px;
+}
+
+.controls {
+  display: inline-flex;
+  gap: 24px;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s;
+  padding: 5px 20px;
+  border-radius: 20px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls button:hover {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+/* Active button (default for right arrow, and on click for either) */
+.controls .active {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+   .title {
+      text-align: center;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .imageWrapper {
+    order: -1; /* show image above content on mobile */
+    text-align: center;
+  }
+  .buttons {
+    justify-content: center;
+  }
+   .slideBody {
+    padding: 0 10px;
+  }
+}

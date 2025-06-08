@@ -1,0 +1,153 @@
+/* Container Styles */
+.teamSection {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .heading {
+    margin-top: 160px;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #111;
+  }
+  
+  /* Categories */
+  .categoryList {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .categoryButton {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+  }
+  
+  .categoryButton:hover {
+    color: #DC8419;
+  }
+  
+  .categoryButton.active {
+    background-color: #DC8419;
+    color: #fff;
+    border-color: #DC8419;
+  }
+  
+  .categoryButton.active:hover {
+    background-color: #e67e00;
+  }
+  
+  /* Team Grid */
+  .teamGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: 750px;
+    align-content: center;
+    margin: 0 auto;
+  }
+  
+  /* Team Card */
+  .teamCard {
+    text-align: center;
+    width: 170px;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    /* border: 4px solid #DC8419;
+    border-radius: 50%; */
+    overflow: hidden;
+  }
+  
+  .profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #DC8419;
+    border-radius: 50%;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+  }
+  
+  .imageWrapper:hover .icon {
+    bottom: -10px;
+  }
+  
+  /* Text Styles */
+  .name {
+    margin-top: 1rem;    
+    margin-bottom: 0rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    height: 43.5px;
+  }
+  
+  .role {
+    font-size: 0.9rem;
+    color: #B95E1C;
+  }
+
+  .line1 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2rem;
+      margin-top: 120px;
+    }
+
+    .teamGrid {
+      gap: 1rem;
+    }
+  
+    .teamCard {
+      width: 130px;
+    }
+  
+    .imageWrapper {
+      width: 100px;
+      height: 100px;
+    }
+
+    .categoryList {
+        gap: 0;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+  }
+
+
+  @media (max-width: 450px) {
+     .categoryButton {
+        padding: 0.3rem 0.2rem;
+    }
+  }
+  
