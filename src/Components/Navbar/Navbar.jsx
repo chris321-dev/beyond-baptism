@@ -13,6 +13,7 @@ import {
   ChartBar,
   HandPalm,
   Envelope,
+  CaretDown,
   SignOut
 } from 'phosphor-react';
 import styles from './Navbar.module.css';
@@ -24,6 +25,16 @@ const Navbar = () => {
   const isHome = location.pathname === '/';
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+
+
+  // On home page, fix navbar once you scroll past 100px
+  // useEffect(() => {
+  //   if (!isHome) return;
+  //   const onScroll = () => setScrolled(window.scrollY > 100);
+  //   window.addEventListener('scroll', onScroll);
+  //   return () => window.removeEventListener('scroll', onScroll);
+  // }, [isHome]);
 
   // Listen for scroll on all pages, threshold 100px
   useEffect(() => {
@@ -38,12 +49,19 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  // figure out which tab is active
+  // let active = 'home';
+  // if (location.pathname === '/under-construction') {
+  //   const params = new URLSearchParams(location.search);
+  //   active = params.get('section') || 'home';
+  // }
+
   let active = 'home';
 
   const params = new URLSearchParams(location.search);
   const section = params.get('section');
 
-  if (location.pathname === '/under-construction' || location.pathname === '/donate' || location.pathname === '/aboutus') {
+  if (location.pathname === '/under-construction' || location.pathname === '/donate' || location.pathname === '/aboutus' || location.pathname === '/ourteam') {
     active = section || 'home';
   }
 
@@ -51,6 +69,12 @@ const Navbar = () => {
   const headerClasses = `${styles.header} ${!isHome ? styles.headerBg : ''}`;
   const navClasses    = `${styles.mainNav} ${scrolled ? styles.fixed : ''}`;
   const closeMenu     = () => setMenuOpen(false);
+
+  const handleNavLinkClick = () => {
+    setAboutDropdownOpen(false); // Close About Us dropdown
+    closeMenu(); // Close the sidebar
+  };
+
 
   return (
     <header className={headerClasses}>
@@ -76,14 +100,41 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li>
+
+          {/* <li>
             <Link
-              to="/under-construction?section=about"
+              to="/aboutus?section=about"
               className={active==='about'?styles.active:''}
             >
               About Us
             </Link>
+          </li> */}
+
+          <li className={styles.dropdown}>
+            <button
+              className={`${styles.navLinkBtn} ${(active === 'about' || active === 'team') ? styles.active : ''}`}
+              onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)}
+              onMouseEnter={() => setAboutDropdownOpen(true)}
+              onMouseLeave={() => setAboutDropdownOpen(false)}
+            >
+              About Us <CaretDown size={15} weight="bold" />
+            </button>
+            <ul className={`${styles.dropdownMenu} ${aboutDropdownOpen ? styles.show : ''}`}
+                onMouseEnter={() => setAboutDropdownOpen(true)}
+                onMouseLeave={() => setAboutDropdownOpen(false)}>
+              <li>
+                <Link to="/aboutus?section=about" onClick={() => setAboutDropdownOpen(false)} className={active==='about'?styles.active:''}>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/ourteam?section=team" onClick={() => setAboutDropdownOpen(false)} className={active==='team'?styles.active:''}>
+                  Meet Our Team
+                </Link>
+              </li>
+            </ul>
           </li>
+
           <li>
             <Link
               to="/under-construction?section=benefits"
@@ -97,7 +148,7 @@ const Navbar = () => {
               to="/under-construction?section=volunteer"
               className={active==='volunteer'?styles.active:''}
             >
-              Get Involved
+              Volunteer
             </Link>
           </li>
           <li>
@@ -115,7 +166,7 @@ const Navbar = () => {
         <div className={styles.actions}>
           <Link
             to="/donate?section=donate"
-            className={`${styles.giveBtn} ${active === 'donate' ? styles.active1 : ''}`}
+            className={`${styles.giveBtn} ${active === 'donate' ? styles.active1 : ''}`} onClick={handleNavLinkClick}
           >
             <Heart size={18} weight="bold" /> Give
           </Link>
@@ -156,19 +207,44 @@ const Navbar = () => {
 
             <ul className={styles.sidebarList}>
               <li>
-                <Link to="/" onClick={closeMenu}>
+                <Link to="/" onClick={handleNavLinkClick} className={active==='home'?styles.active:''}>
                   <House size={20} /> Home
                 </Link>
               </li>
-              <li>
-                <Link to="/under-construction?section=about" onClick={closeMenu}>
+
+              {/* <li>
+                <Link to="/aboutus?section=about" onClick={closeMenu}>
                   <Users size={20} /> About Us
                 </Link>
+              </li> */}
+
+              <li className={styles.sidebarDropdown}>
+                <button
+                  className={`${styles.sidebarDropdownToggle} ${(active === 'about' || active === 'team') ? styles.active : ''}`}
+                  onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)} 
+                >
+                  <Users size={20} /> About Us <CaretDown size={15} />
+                </button>
+                {aboutDropdownOpen && (
+                  <ul className={styles.sidebarSubmenu}>
+                    <li>
+                      <Link to="/aboutus?section=about" onClick={closeMenu} className={active==='about'?styles.active:''}>
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/ourteam?section=team" onClick={closeMenu} className={active==='team'?styles.active:''}>
+                        Meet The Team
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
+
               <li>
                 <Link
                   to="/under-construction?section=benefits"
-                  onClick={closeMenu}
+                  onClick={handleNavLinkClick} className={active==='benefits'?styles.active:''}
                 >
                   <ChartBar size={20} /> Parish Benefits
                 </Link>
@@ -176,13 +252,13 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/under-construction?section=volunteer"
-                  onClick={closeMenu}
+                  onClick={handleNavLinkClick} className={active==='volunteer'?styles.active:''}
                 >
-                  <HandPalm size={20} /> Get Involved
+                  <HandPalm size={20} /> Volunteer
                 </Link>
               </li>
               <li>
-                <Link to="/under-construction?section=contact" onClick={closeMenu}>
+                <Link to="/under-construction?section=contact" onClick={handleNavLinkClick} className={active==='contact'?styles.active:''}>
                   <Envelope size={20} /> Contact Us
                 </Link>
               </li>
