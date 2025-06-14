@@ -81,7 +81,7 @@ const Navbar = () => {
               to="/under-construction?section=about"
               className={active==='about'?styles.active:''}
             >
-              About us
+              About Us
             </Link>
           </li>
           <li>
@@ -162,7 +162,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to="/under-construction?section=about" onClick={closeMenu}>
-                  <Users size={20} /> About us
+                  <Users size={20} /> About Us
                 </Link>
               </li>
               <li>
@@ -183,7 +183,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to="/under-construction?section=contact" onClick={closeMenu}>
-                  <Envelope size={20} /> Contact us
+                  <Envelope size={20} /> Contact Us
                 </Link>
               </li>
             </ul>

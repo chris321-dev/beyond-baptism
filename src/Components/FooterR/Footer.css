@@ -1,6 +1,5 @@
-
 .footer {
-  background: #073955;
+  background: #1A1B1A;
   padding: 2rem 0 1rem;
 }
 .footer .secContainer {
@@ -63,7 +62,7 @@
   color: #fff;
 }
 .footer .secContainer .footerLinks a, .footer .secContainer .footerLinks .phone, .footer .secContainer .footerLinks .email {
-  color: var(--greyColor);
+  color: #ffffffc4;
   font-size: 13px;
   font-weight: 500;
 }

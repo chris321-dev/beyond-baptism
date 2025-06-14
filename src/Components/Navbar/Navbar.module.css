@@ -24,7 +24,12 @@
   position:fixed; top:0; left:0; width:100%;
   background:rgba(0,0,0,.85); z-index:999;
 }
-.logo img { height:50px; }
+.logo img { 
+  height:50px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+}
 .navList {
   display:flex; gap:30px; list-style:none;
   margin:0; padding:0; margin-left:auto; margin-right:20px;
