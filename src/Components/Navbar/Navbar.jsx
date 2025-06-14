@@ -234,7 +234,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link to="/ourteam?section=team" onClick={closeMenu} className={active==='team'?styles.active:''}>
-                        Meet The Team
+                        Meet Our Team
                       </Link>
                     </li>
                   </ul>
