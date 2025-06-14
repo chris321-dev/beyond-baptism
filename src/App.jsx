@@ -7,6 +7,7 @@ import SubIntro from "./Components/SubIntro/SubIntro";
 import Section1 from "./Components/Section1/Section1";
 import Services from "./Components/Services/Services";
 import AboutUs from "./Components/AboutUs/AboutUs";
+import Team from "./Components/Team/Team";
 import Contact from "./Components/Contact/Contact";
 import OurStories from "./Components/Stories/OurStories";
 import Footer from "./Components/FooterR/Footer";
