@@ -29,10 +29,10 @@ const ContactForm = () => {
     setSending(true);
 
     emailjs.send(
-      'SERVICE ID',
-      'TEMPLATE ID',
+      'service_23civgk',
+      'template_d0mt5t6',
       form,
-      'PUBLIC KEY'
+      'XPO5tovWYNNjLFajt'
     ).then(() => {
       alert('Message sent!');
       // clear form inputs
