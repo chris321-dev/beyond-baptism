@@ -79,6 +79,8 @@ const DonateSection = () => {
 
     <PricingToggle />
 
+    <hr className={styles.line1} />
+
     <GratitudeSection />
 
     </>
