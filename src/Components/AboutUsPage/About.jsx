@@ -104,6 +104,8 @@ export default function About() {
         </div>
       </section>
 
+      <hr className={styles.line1} /> 
+
       <ContactForm />
 
     </>
