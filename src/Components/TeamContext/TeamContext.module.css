@@ -14,11 +14,13 @@
   }
 
   .line1 {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color:#555;
-  }
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      height: 1px;
+      background-color: #777; 
+    }
 
   @media (max-width: 992px) {
     .aboutSection {
