@@ -10,22 +10,19 @@
   /* Optional: Add spacing between paragraphs */
   .aboutSection p {
     margin-bottom: 1.5rem;
-  }
-
-  p {
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 
   .line1 {
     width: 100%;
     margin: 0;
     padding: 0;
-    color:#333;
+    color:#555;
   }
 
-  @media (max-width: 768px) {
-    p {
-      font-size: 16px;
+  @media (max-width: 992px) {
+    .aboutSection {
+      margin: 20px auto;  
     }
   }
   
