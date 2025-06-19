@@ -132,6 +132,7 @@ textarea {
 @media screen and (max-width: 768px) {
   .contactSection {
     flex-direction: column;
+    margin-top: 35px;
   }
 
   .imageSide {
