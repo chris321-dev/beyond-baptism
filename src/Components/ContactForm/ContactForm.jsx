@@ -26,6 +26,13 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Manual validation for phone
+    if (!form.phone || form.phone.replace(/\D/g, '').length < 7) {
+      alert('Please enter a valid phone number.');
+      return;
+    }
+    
     setSending(true);
 
     emailjs.send(
