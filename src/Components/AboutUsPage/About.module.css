@@ -102,7 +102,7 @@
 .slider {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 80px;
 }
 .pager {
   font-size: 1.1rem;
@@ -153,6 +153,15 @@
   color: #fff;
 }
 
+.line1 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 1px;
+  background-color: #777; 
+}
+
 
 
 /* Responsive: stack on smaller screens */
@@ -173,5 +182,8 @@
   }
    .slideBody {
     padding: 0 10px;
+  }
+  .slider {
+    margin: 0 auto 65px;
   }
 }

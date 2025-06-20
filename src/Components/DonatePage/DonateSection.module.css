@@ -177,9 +177,16 @@
     right: 0;
     color: #ccc;
   }
+
+  .line1 {
+    width: 100%;
+    margin: 60px 0 20px;
+    padding: 0;
+    border: none;
+    height: 1px;
+    background-color: #777; 
+  }
   
-
-
   
   /* Responsive: stack on smaller screens */
   @media (max-width: 768px) {
@@ -197,6 +204,10 @@
     }
     .buttons {
       justify-content: center;
+    }
+    .line1 {
+      width: 100%;
+      margin: 45px 0 5px;
     }
   }
   
