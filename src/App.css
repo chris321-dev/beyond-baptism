@@ -145,12 +145,20 @@ img, video {
 }
 
 .react-tel-input .country-list .country:hover {
-  background-color: #333 !important;
+  background-color: #444 !important;
+}
+
+.react-tel-input .country-list .country.highlight {
+  background-color: #222 !important;
 }
 
 .react-tel-input .form-control:focus {
   border: 2.5px solid #777 !important;
   box-shadow: none !important; /* removes default blue glow */
+}
+
+.country-name {
+  color: #fff !important;
 }
 
 
