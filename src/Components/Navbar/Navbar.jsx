@@ -61,7 +61,7 @@ const Navbar = () => {
   const params = new URLSearchParams(location.search);
   const section = params.get('section');
 
-  if (location.pathname === '/under-construction' || location.pathname === '/donate' || location.pathname === '/aboutus' || location.pathname === '/ourteam') {
+  if (location.pathname === '/under-construction' || location.pathname === '/donate' || location.pathname === '/contactus' || location.pathname === '/aboutus' || location.pathname === '/ourteam') {
     active = section || 'home';
   }
 
@@ -153,8 +153,8 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/under-construction?section=contact"
-              className={active==='contact'?styles.active:''}
+              to="/contactus?section=contactus"
+              className={active==='contactus'?styles.active:''}
             >
               Contact Us
             </Link>
@@ -258,7 +258,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/under-construction?section=contact" onClick={handleNavLinkClick} className={active==='contact'?styles.active:''}>
+                <Link to="/contactus?section=contactus" onClick={handleNavLinkClick} className={active==='contactus'?styles.active:''}>
                   <Envelope size={20} /> Contact Us
                 </Link>
               </li>
