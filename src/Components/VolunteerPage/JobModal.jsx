@@ -17,7 +17,7 @@ const JobModal = ({ job, onClose }) => {
           <span>{job.details.experience}</span>
         </div>
 
-        <button className={styles.apply}>Apply Now</button>
+        <button className={styles.apply}><a href='https://forms.gle/mZpZRowEWrJeQ2pGA' target='blank'>Apply Now</a></button>
 
         <div className={styles.section}>
           <h4>About this role</h4>
