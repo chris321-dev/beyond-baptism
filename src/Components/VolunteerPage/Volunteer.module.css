@@ -179,3 +179,7 @@
   border-radius: 20px;
   cursor: pointer;
 }
+
+.applyBtn a {
+  color: #fff;
+}
