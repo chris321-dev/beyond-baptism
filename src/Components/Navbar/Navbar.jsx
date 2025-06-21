@@ -61,7 +61,7 @@ const Navbar = () => {
   const params = new URLSearchParams(location.search);
   const section = params.get('section');
 
-  if (location.pathname === '/under-construction' || location.pathname === '/donate' || location.pathname === '/contactus' || location.pathname === '/aboutus' || location.pathname === '/ourteam') {
+  if (location.pathname === '/under-construction' || location.pathname === '/donate' || location.pathname === '/volunteer' || location.pathname === '/contactus' || location.pathname === '/aboutus' || location.pathname === '/ourteam') {
     active = section || 'home';
   }
 
@@ -145,7 +145,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/under-construction?section=volunteer"
+              to="/volunteer?section=volunteer"
               className={active==='volunteer'?styles.active:''}
             >
               Volunteer
@@ -251,7 +251,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/under-construction?section=volunteer"
+                  to="/volunteer?section=volunteer"
                   onClick={handleNavLinkClick} className={active==='volunteer'?styles.active:''}
                 >
                   <HandPalm size={20} /> Volunteer
