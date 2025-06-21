@@ -58,6 +58,7 @@ function App() {
             <Route path="/donate" element={<DonateSection />} />
             <Route path="/aboutus" element={<About />} />
             <Route path="/ourteam" element={<Team />} />
+            <Route path="/volunteer" element={<Volunteer />} />
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} /> { /* for invalid paths */}
           </Routes>
