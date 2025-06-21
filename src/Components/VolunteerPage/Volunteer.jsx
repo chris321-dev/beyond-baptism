@@ -36,7 +36,7 @@ const Volunteer = () => {
                 </div>
                 <div className={styles.buttons}>
                   <button className={styles.detailsBtn} onClick={() => setSelectedJob(job)}>Details</button>
-                  <button className={styles.applyBtn}>Apply</button>
+                  <button className={styles.applyBtn}><a href='https://forms.gle/mZpZRowEWrJeQ2pGA' target='blank'>Apply</a></button>
                 </div>
               </div>
             </div>
