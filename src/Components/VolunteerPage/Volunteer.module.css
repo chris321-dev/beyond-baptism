@@ -1,0 +1,181 @@
+.volunteerSection {
+  padding: 40px 20px;
+  background: #f3f3f3;
+  margin-top: 70px;
+}
+
+/* .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+} */
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.imageWrapper {
+  text-align: center;
+}
+
+.header p {
+    font-size: 2.6rem;
+    padding-top: 20px;
+
+}
+
+.header strong {
+    font-size: 2.8rem;
+}
+
+.folderImg {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .folderImg {
+    display: none;
+  }
+  .header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.allPositions h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.micIcon {
+  width: 60px;
+}
+
+.grid {
+  display: grid;
+  gap: 25px;
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.cardTop {
+  padding: 20px;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+
+.date {
+  background: #fff;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  /*  */
+  width: 95px;
+  height: 17px;
+}
+
+.greenDot {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: limegreen;
+  border-radius: 50%;
+}
+
+.org {
+  font-size: 0.85rem;
+  color: #3498db;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.imageIcon {
+    width: 25px;
+    height: 35px;
+}
+
+.cardTop h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.cardBottom {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.type {
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.detailsBtn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.applyBtn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
