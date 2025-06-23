@@ -44,7 +44,11 @@ const Volunteer = () => {
         </div>
       </div>
 
-      <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} />
+{/*       <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} /> */}
+
+      {selectedJob && (
+        <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} />
+      )}
     </section>
   );
 };
