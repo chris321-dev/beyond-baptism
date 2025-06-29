@@ -26,7 +26,7 @@ const JobModal = ({ job, onClose }) => {
       <div className={`${styles.modal} ${show ? styles.show : ''}`}>
         <button onClick={onClose} className={styles.closeBtn}>×</button>
         <h2>{job.title}</h2>
-        <p className={styles.org}>📍 Beyond Baptism – {job.location}</p>
+        <p className={styles.org}>📍 Beyond Baptism {job.location101}</p>
 
         <div className={styles.tags}>
           <span>{job.details.timeType}</span>
