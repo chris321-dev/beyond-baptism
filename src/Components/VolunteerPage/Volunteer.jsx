@@ -69,7 +69,7 @@ const Volunteer = () => {
               <div className={styles.cardBottom}>
                 <div>
                   <p className={styles.type}>{job.type}</p>
-                  <p>{job.location}</p>
+                  <p>{job.location101}</p>
                 </div>
                 <div className={styles.buttons}>
                   <button className={styles.detailsBtn} onClick={() => setSelectedJob(job)}>Details</button>
