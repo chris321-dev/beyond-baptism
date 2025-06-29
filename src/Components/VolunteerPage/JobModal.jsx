@@ -40,7 +40,7 @@ const JobModal = ({ job, onClose }) => {
 
         <div className={styles.section}>
           <h4>About this role</h4>
-          <p>{job.details.about}</p>
+          <p style={{ whiteSpace: 'pre-line' }}>{job.details.about}</p>
         </div>
 
         {/* Controlled dropdowns */}
@@ -103,11 +103,26 @@ const JobModal = ({ job, onClose }) => {
           )}
         </div>
 
-        <div className={styles.section}>
+{/*         <div className={styles.section}>
           <h4>Salary & Work Hours</h4>
           <p><strong>Salary:</strong> {job.details.salary}</p>
           <p><strong>Work Hours:</strong> {job.details.workHours}</p>
+        </div> */}
+
+        <div className={styles.section}>
+          {/* <h4>{job.type === 'Paid' ? 'Salary & Work Hours' : 'Work Hours'}</h4> */}
+
+          {job.type === 'Paid' && (
+            <h4>Salary & Work Hours</h4>
+          )}
+
+          {job.type === 'Paid' && (
+            <p><strong>Salary:</strong> {job.details.salary}</p>
+          )}
+
+          <p><strong>Work Hours:</strong> {job.details.workHours}</p>
         </div>
+        
       </div>
     </div>
   );
