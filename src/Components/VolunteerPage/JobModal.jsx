@@ -111,17 +111,26 @@ const JobModal = ({ job, onClose }) => {
         </div> */}
 
         <div className={styles.section}>
-          {/* <h4>{job.type === 'Paid' ? 'Salary & Work Hours' : 'Work Hours'}</h4> */}
-
-          {job.type === 'Paid' && (
-            <h4>Salary & Work Hours</h4>
+          
+           {job.type === 'Paid' && (
+            <h4>
+              {job.title === 'IT Coordinator'
+                ? 'Stipend & Volunteer Hours'
+                : 'Salary & Volunteer Hours'}
+            </h4>
           )}
 
           {job.type === 'Paid' && (
-            <p><strong>Salary:</strong> {job.details.salary}</p>
+            <p>
+              <strong>
+                {job.title === 'IT Coordinator' ? 'Stipend:' : 'Salary:'}
+              </strong>{' '}
+              {job.details.salary}
+            </p>
           )}
 
-          <p><strong>Work Hours:</strong> {job.details.workHours}</p>
+          <p><strong>Volunteer Hours :</strong> {job.details.workHours}</p>
+
         </div>
         
       </div>
