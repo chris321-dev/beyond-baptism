@@ -167,7 +167,7 @@ const jobData = [
           'Manage the IT budget, including forecasting expenses, tracking spending, and ensuring cost-effectiveness in technology investments'
       ],
       timeCommitment: [],
-      salary: 'This position will start as a volunteer role with the goal of transitioning to a paid position with an annual salary to be determined once funding is secured.',
+      salary: '$12,000 annually',
       workHours: '10 hours per week',
     }
   },
