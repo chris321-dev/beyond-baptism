@@ -83,7 +83,7 @@ const JobModal = ({ job, onClose }) => {
             </ul>
           )}
 
-          <div
+{/*           <div
             className={styles.dropdownHeader}
             onClick={() => toggleSection('timeCommitment')}
           >
@@ -100,7 +100,8 @@ const JobModal = ({ job, onClose }) => {
                 <li key={i}>{q}</li>
               ))}
             </ul>
-          )}
+          )} */}
+          
         </div>
 
 {/*         <div className={styles.section}>
