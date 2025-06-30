@@ -132,7 +132,7 @@ const jobData = [
 
    {
     id: 4,
-    title: 'IT Coordinator ',
+    title: 'IT Coordinator',
     date: '',
     type: 'Paid',
     location: 'Belleville, NJ',
