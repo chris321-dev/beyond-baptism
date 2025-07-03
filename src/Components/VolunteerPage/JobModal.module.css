@@ -60,6 +60,7 @@
 .section ul {
   padding-left: 0;
   list-style: none;
+  font-size: 1.05rem;
 }
 
 .section ul li {
@@ -81,7 +82,8 @@
 
 
 .section p {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    line-height: 1.2;
 }
 
 .section summary {
