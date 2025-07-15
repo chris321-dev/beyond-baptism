@@ -1,7 +1,7 @@
 import React from 'react';
 import './SubIntro.css';
 import Alert from '../Alert/Alert';
-import img1 from "../../Assets/graceImg.webp";
+import img1 from "../../Assets/graceimg1.png";
 
 const SubIntro = () => {
   return (
