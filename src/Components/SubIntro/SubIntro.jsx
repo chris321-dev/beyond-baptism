@@ -12,7 +12,7 @@ const SubIntro = () => {
       <div className="content">
         
         <h1 className="title">
-          Change, Growth, and <span className="highlight">Eucharist</span> for all.
+          Where the <span className="highlight">Eucharist</span> is central, discipleship grows
         </h1>
         <p className="description">
         Beyond Baptism transforms lives and revitalizes parishes by fostering encounters with Jesus in the Eucharist, empowering discipleship, and providing pastors with a unique, Eucharist-centered
