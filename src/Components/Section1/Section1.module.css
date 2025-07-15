@@ -1,6 +1,7 @@
 .sec1 {
-    background-color: #0E2030;
-    height: 450px;
+    /* background-color: #0E2030;
+    height: 450px; */
+    padding-bottom: 45px;
 }
 
 .sec {
@@ -71,14 +72,20 @@
 }
 
 .card {
-  background-color: white;
+  background-color: white !important; /* Ensures no transparency */
+  background: url("../../Assets/Marble-texture.webp"); /* White marble-like background */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* So child elements don't spill out */
+  position: relative;
+  
   border-radius: 12px;
   padding: 20px;
   text-align: center;
   width: 300px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   color: #333;
-  border: 1px solid #A38900;
+  /* border: 1px solid #A38900; */
   transition: box-shadow 0.2s ease;
 }
 
