@@ -72,7 +72,7 @@ const Section1 = () => {
   return (
     <div className={s.sec1}>
     <div className='section container'>
-    <p className={s.subtitle}>TRANSFORM YOUR PARISH</p>
+    {/* <p className={s.subtitle}>TRANSFORM YOUR PARISH</p>
     <div className={s.sec}>
       <div className={s.content}>
         
@@ -86,7 +86,7 @@ const Section1 = () => {
       <div className={s.imagePlaceholder}>
       <img src={img} alt="Church" className={s.centeredImage} />
       </div>
-    </div>
+    </div> */}
 
     <div className={s.cards}>
       {cardsData.map((card, index) => (

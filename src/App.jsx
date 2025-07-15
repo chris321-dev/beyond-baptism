@@ -4,6 +4,8 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import SubIntro from "./Components/SubIntro/SubIntro";
+import AwakenSection from "./Components/AwakenSection/AwakenSection";
+import MuseumPreview from "./Components/MuseumPreview/MuseumPreview";
 import Section1 from "./Components/Section1/Section1";
 import Services from "./Components/Services/Services";
 import AboutUs from "./Components/AboutUs/AboutUs";
@@ -46,9 +48,11 @@ function App() {
                 <>
                   <Hero />
                   <SubIntro />
-                  <Section1 />
+                  <AwakenSection />
+                  <MuseumPreview />                                  
                   <Services />
                   <AboutUs />
+                  <Section1 />
                   <Contact />
                   <OurStories />                  
                 </>

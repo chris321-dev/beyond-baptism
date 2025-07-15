@@ -18,12 +18,12 @@ const AwakenSection = () => {
           <div className={styles.meta}>
             <span className={styles.label}>Heaven Meets Earth at Mass</span>
             <span className={styles.date}>7-Dec-19</span>
-            {/* <a href="" target="_blank" rel="noreferrer" className={styles.watchBtn}>
-              Watch Now
-            </a> */}
-            <a className={styles.watchBtn}>
+            <a href="https://www.youtube.com/watch?v=OOLZDaTgIaM" target="_blank" rel="noreferrer" className={styles.watchBtn}>
               Watch Now
             </a>
+{/*             <a className={styles.watchBtn}>
+              Watch Now
+            </a> */}
           </div>
 
           <p className={styles.credits}>
