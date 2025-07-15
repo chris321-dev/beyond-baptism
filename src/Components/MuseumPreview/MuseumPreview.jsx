@@ -62,7 +62,7 @@ const MuseumPreview = () => {
               <a href={video.link} target="_blank" rel="noopener noreferrer" className={styles.imageWrapper}>
                 <img src={video.image} alt={video.title} />
                 <div className={styles.playOverlay}>
-                  <Play size={32} weight="fill" color="#2196f3" />
+                  <Play size={32} weight="fill"/>
                 </div>
               </a>
               <div className={styles.info}>
