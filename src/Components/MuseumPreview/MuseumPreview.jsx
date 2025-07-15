@@ -13,7 +13,7 @@ const videoData = [
     title: 'Eucharist with Chris Stefanick',
     description: 'Join Chris as he explains John 6 and his connection to Jesus’s sacrifice.',
     duration: '3 minutes',
-    link: 'https://www.youtube.com/1',
+    link: 'https://www.youtube.com/',
     image: video1,
   },
   {
@@ -21,7 +21,7 @@ const videoData = [
     title: '3 Scientifically Proven Eucharistic Miracles',
     description: 'In this video we’re going to go over three Eucharistic miracles that have been examined by top scientists around the world.',
     duration: '6 minutes',
-    link: 'https://www.youtube.com/2',
+    link: 'https://www.youtube.com/',
     image: video2,
   },
   {
@@ -29,7 +29,7 @@ const videoData = [
     title: 'Who was Carlo Acutis?',
     description: 'Discover the joyful and faith-filled life of Blessed Carlo Acutis — a teenager who loved Jesus in the Eucharist.',
     duration: '5 minutes',
-    link: 'https://www.youtube.com/3',
+    link: 'https://www.youtube.com/',
     image: video3,
   },
 ];
