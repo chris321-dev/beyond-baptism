@@ -82,6 +82,14 @@ const videoData = [
 const MuseumPreview = () => {
   const scrollRef = useRef(null);
 
+  // const scroll = (direction) => {
+  //   if (scrollRef.current) {
+  //     scrollRef.current.scrollBy({
+  //       left: direction === 'left' ? -350 : 350,
+  //       behavior: 'smooth',
+  //     });
+  //   }
+
   const scroll = (direction) => {
   if (scrollRef.current) {
     const container = scrollRef.current;
@@ -112,7 +120,8 @@ const MuseumPreview = () => {
     }
   }
 };
-  
+
+
 
   return (
     <section className={styles.museum}>
