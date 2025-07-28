@@ -83,19 +83,42 @@ const MuseumPreview = () => {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -350 : 350,
-        behavior: 'smooth',
-      });
+  if (scrollRef.current) {
+    const container = scrollRef.current;
+    const card = container.querySelector(`.${styles.card}`);
+    if (!card) return;
+
+    const cardWidth = card.offsetWidth;
+    const containerWidth = container.offsetWidth;
+
+    let scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+
+    container.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth',
+    });
+
+    // Center the card on small screens (<= 400px)
+    if (window.innerWidth <= 400) {
+      const centerOffset = (containerWidth - cardWidth) / 2;
+      const scrollTo = container.scrollLeft + scrollAmount - centerOffset;
+
+      setTimeout(() => {
+        container.scrollTo({
+          left: scrollTo,
+          behavior: 'smooth',
+        });
+      }, 300);
     }
-  };
+  }
+};
+  
 
   return (
     <section className={styles.museum}>
       <div className={styles.header}>
         <ArrowRight size={28} color="#fcbf49" />
-        <h2>Eucharistic Museum Preview</h2>
+        <h2 className={styles.gradientText}>Eucharistic Museum Preview</h2>
       </div>
 
       <div className={styles.galleryWrapper}>
