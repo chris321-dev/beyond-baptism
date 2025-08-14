@@ -10,6 +10,7 @@ import Section1 from "./Components/Section1/Section1";
 import Services from "./Components/Services/Services";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Team from "./Components/Team/Team";
+import ParishBenefits from "./Components/ParishBenefits/ParishBenefits";
 import Contact from "./Components/Contact/Contact";
 import OurStories from "./Components/Stories/OurStories";
 import Footer from "./Components/FooterR/Footer";
@@ -62,6 +63,7 @@ function App() {
             <Route path="/donate" element={<DonateSection />} />
             <Route path="/aboutus" element={<About />} />
             <Route path="/ourteam" element={<Team />} />
+            <Route path="/parishbenefits" element={<ParishBenefits />} />
             <Route path="/volunteer" element={<Volunteer />} />
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} /> { /* for invalid paths */}
