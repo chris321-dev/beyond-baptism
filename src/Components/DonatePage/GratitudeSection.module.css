@@ -64,6 +64,7 @@
     display: none; /* hidden for the main time */
 }
 
+
 @media (min-width: 768px) {
   .cardDesc {
     height: 130px;

@@ -19,6 +19,10 @@
   max-width: 800px;
 }
 
+.section {
+  padding-top: 1rem !important;
+}
+
 /* Other styles remain the same */
 .sec {
   display: grid;

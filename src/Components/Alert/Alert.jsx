@@ -26,7 +26,8 @@ const Alert = ({ message, children }) => {
       {showAlert && (
         <div style={styles.overlay}>
           <div style={styles.alertBox}>
-            <p style={{fontSize: "16px", height: "auto", width: "auto", color: "#DC8419"}}>{message || "More inspiring content coming soon --stay tuned and blessed!"}</p>
+            {/* <p style={{fontSize: "16px", height: "auto", width: "auto", color: "#DC8419"}}>{message || "More inspiring content coming soon --stay tuned and blessed!"}</p> */}
+            <p style={{fontSize: "16px", height: "auto", width: "auto", color: "#DC8419"}}>{message || "More inspiring content coming soon --stay tuned and blessed!"}</p>            
             <button onClick={handleHideAlert} style={styles.button}>
               OK
             </button>

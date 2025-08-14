@@ -15,7 +15,7 @@ import {
   Envelope,
   CaretDown,
   SignOut
-} from 'phosphor-react';
+} from '@phosphor-icons/react';
 import styles from './Navbar.module.css';
 import logo from '../../Assets/Beyond-Baptism-Logo-white-1.png';
 import icon1 from '../../Assets/USIcon.png';
@@ -26,6 +26,10 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+
+  const [aboutDropdownOpen1, setAboutDropdownOpen1] = useState(false);
+
+  
 
 
   // On home page, fix navbar once you scroll past 100px
@@ -59,11 +63,33 @@ const Navbar = () => {
   let active = 'home';
 
   const params = new URLSearchParams(location.search);
-  const section = params.get('section');
+const section = params.get('section');
 
-  if (location.pathname === '/under-construction' || location.pathname === '/donate' || location.pathname === '/volunteer' || location.pathname === '/contactus' || location.pathname === '/aboutus' || location.pathname === '/ourteam') {
-    active = section || 'home';
-  }
+const pathKey = location.pathname + (location.hash || '');
+
+// Use section if present, otherwise pathKey
+if (
+  location.pathname === '/under-construction' ||
+  location.pathname === '/donate' ||
+  location.pathname === '/volunteer' ||
+  location.pathname === '/contactus' ||
+  location.pathname === '/aboutus' ||
+  location.pathname === '/ourteam' ||
+  location.pathname === '/parishbenefits'
+) {
+  active = section || pathKey || 'home';
+}
+
+  // const params = new URLSearchParams(location.search);
+  // const section = params.get('section');
+
+  // if (location.pathname === '/under-construction' || location.pathname === '/donate' || location.pathname === '/volunteer' || location.pathname === '/contactus' || location.pathname === '/aboutus' || location.pathname === '/ourteam' || location.pathname === '/parishbenefits' || location.pathname === '/parishbenefits#testimonials') {
+  //   active = section || 'home';
+  // }
+
+  //  if (location.pathname === '/under-construction' || location.pathname === '/donate' || location.pathname === '/volunteer' || location.pathname === '/contactus' || location.pathname === '/aboutus' || location.pathname === '/ourteam' || (location.pathname === '/parishbenefits' && location.hash === '#testimonials')) {
+  //   active = section || 'home';
+  // }
 
 
   const headerClasses = `${styles.header} ${!isHome ? styles.headerBg : ''}`;
@@ -135,14 +161,46 @@ const Navbar = () => {
             </ul>
           </li>
 
-          <li>
+
+
+          {/* <li>
             <Link
-              to="/under-construction?section=benefits"
-              className={active==='benefits'?styles.active:''}
+              to="/parishbenefits?section=parishbenefits"
+              className={active==='parishbenefits'?styles.active:''}
             >
               Parish Benefits
             </Link>
+          </li> */}
+
+
+
+           <li className={styles.dropdown}>
+            <button
+              className={`${styles.navLinkBtn} ${(active === 'parishbenefits' || active === 'parishbenefits#testimonials') ? styles.active : ''}`}
+              onClick={() => setAboutDropdownOpen1(!aboutDropdownOpen1)}
+              onMouseEnter={() => setAboutDropdownOpen1(true)}
+              onMouseLeave={() => setAboutDropdownOpen1(false)}
+            >
+              Parish Benefits <CaretDown size={15} weight="bold" />
+            </button>
+            <ul className={`${styles.dropdownMenu} ${aboutDropdownOpen1 ? styles.show : ''}`}
+                onMouseEnter={() => setAboutDropdownOpen1(true)}
+                onMouseLeave={() => setAboutDropdownOpen1(false)}>
+              <li>
+                <Link to="/parishbenefits?section=parishbenefits" onClick={() => setAboutDropdownOpen1(false)} className={active==='parishbenefits'?styles.active:''}>
+                  Parish Benefits
+                </Link>
+              </li>
+              <li>
+                <Link to="/parishbenefits#testimonials" onClick={() => setAboutDropdownOpen1(false)} className={active==='parishbenefits#testimonials'?styles.active:''}>
+                  Testimonials
+                </Link>
+              </li>
+            </ul>
           </li>
+
+
+
           <li>
             <Link
               to="/volunteer?section=volunteer"
@@ -234,21 +292,48 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link to="/ourteam?section=team" onClick={closeMenu} className={active==='team'?styles.active:''}>
-                        Meet Our Team
+                        Meet The Team
                       </Link>
                     </li>
                   </ul>
                 )}
               </li>
 
-              <li>
+              {/* <li>
                 <Link
-                  to="/under-construction?section=benefits"
-                  onClick={handleNavLinkClick} className={active==='benefits'?styles.active:''}
+                  to="/parishbenefits?section=parishbenefits"
+                  onClick={handleNavLinkClick} className={active==='parishbenefits'?styles.active:''}
                 >
                   <ChartBar size={20} /> Parish Benefits
                 </Link>
+              </li> */}
+
+
+              <li className={styles.sidebarDropdown}>
+                <button
+                  className={`${styles.sidebarDropdownToggle} ${(active === 'parishbenefits' || active === 'parishbenefits#testimonials') ? styles.active : ''}`}
+                  onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)} 
+                >
+                  <ChartBar size={20} /> Parish Benefits <CaretDown size={15} />
+                </button>
+                {aboutDropdownOpen && (
+                  <ul className={styles.sidebarSubmenu}>
+                    <li>
+                      <Link to="/parishbenefits?section=parishbenefits" onClick={closeMenu} className={active==='parishbenefits'?styles.active:''}>
+                        Parish Benefits
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/parishbenefits#testimonials" onClick={closeMenu} className={active==='parishbenefits#testimonials'?styles.active:''}>
+                        Testimonials
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
+
+
+
               <li>
                 <Link
                   to="/volunteer?section=volunteer"

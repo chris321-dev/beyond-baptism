@@ -1,0 +1,180 @@
+.wrapper {
+  background: url("../../Assets/testimonialBg.webp") no-repeat center center/cover;
+  padding: 100px 20px 70px;
+  text-align: center;
+
+}
+
+/* .top1{
+  margin-top: 90px;
+} */
+
+.heading {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  /* margin-top: 120px; */
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* keep your arrows as-is */
+.arrow {
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 4; /* above cards */
+}
+
+/* BIG change: use absolute positioning for overlap/centering */
+.carousel {
+  position: relative;
+  flex: 1;
+  height: 460px; /* room for the cards; tweak if needed */
+  overflow: hidden;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 350px;
+  max-width: 350px;
+  height: 400px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.45s ease, opacity 0.45s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+
+/* center card feels elevated */
+.card[style*="scale(1)"] {
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.25);
+}
+
+.quoteIcon {
+  color: #F477B6;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.textBox {
+  flex: 1;
+  font-size: 1.05rem;
+  max-height: 260px;
+  overflow-y: auto;
+  text-align: left;
+  scrollbar-width: thin;
+  scrollbar-color: #bbb #eee;
+}
+.textBox::-webkit-scrollbar { width: 6px; }
+.textBox::-webkit-scrollbar-thumb { background: #bbb; border-radius: 6px; }
+.textBox::-webkit-scrollbar-track { background: #eee; }
+
+.textBox p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.cardFooter11 h4,
+.cardFooter11 span {
+  text-align: left;
+}
+
+.iconRight {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: blue;
+}
+
+.thumbsIcon {
+  font-size: 1.2rem;
+}
+
+.iconRight span {
+  color: #000;
+  font-weight: bold;
+}
+
+.dots {
+  margin-top: -40px;
+}
+
+/* keep your dots as-is */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #555;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.activeDot {
+  background-color: white;
+}
+
+/* Medium: show two cards (no overlap) */
+@media screen and (max-width: 1100px) and (min-width: 830px) {
+  .carousel {
+    height: 420px;
+  }
+  .card {
+    width: 300px; /* keep size; positioning handled in JS */
+    height: 380px;
+  }
+  .dots {
+    margin-top: -10px;
+  }
+}
+
+/* Small: single centered card */
+@media screen and (max-width: 829px) {
+  .wrapper {
+    padding: 80px 5px 50px;
+  }
+  .dots {
+    margin-top: 5px;
+  }
+  .carousel {
+    height: 380px;
+  }
+  .card {
+    width: 280px; /* still centered via JS translate(-50%) */
+    height: 360px;
+    transition: opacity 0.8s ease, box-shadow 0.3s ease;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    padding: 20px 10px;
+    width: 235px;
+  }
+}

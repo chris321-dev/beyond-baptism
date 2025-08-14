@@ -45,9 +45,11 @@ form {
   flex-direction: column;
 }
 
-label {
+.contactSection label {
   font-weight: 500;
   margin-bottom: 8px;
+  color: #fff !important;
+  font-size: 1.05rem !important;
 }
 
 label span {

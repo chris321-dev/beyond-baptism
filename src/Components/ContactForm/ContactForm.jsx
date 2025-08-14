@@ -32,7 +32,7 @@ const ContactForm = () => {
       alert('Please enter a valid phone number.');
       return;
     }
-    
+
     setSending(true);
 
     emailjs.send(

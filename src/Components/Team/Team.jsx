@@ -11,6 +11,7 @@ import img7 from "../../Assets/teamImg/img7.png";
 import img8 from "../../Assets/teamImg/img8.png";
 import icon1 from "../../Assets/teamImg/icon1.png";
 
+
 const teamData = [
   { id: 1, name: 'Debbie Mastroeni', role: 'Co-Founder', category: 'co-founder', img: img1 },
   { id: 2, name: 'Richard Doran', role: 'Co-Founder', category: 'co-founder', img: img2 },

@@ -53,7 +53,24 @@ const Hero = () => {
   const slide = slides[current];
 
 
+
+
   return (
+    // <section
+    //   className={styles.hero}
+    // >
+    //   <div className={styles.overlay} />
+    //   <img src={leftArrow} className={styles.navArrow + ' ' + styles.prev} onClick={prev} alt="Prev" />
+    //   <div className={styles.content}>
+    //     <span className={styles.sub}>{slide.sub}</span>
+    //     <h1 className={styles.title}>{slide.title}</h1>
+    //     <p className={styles.text}>{slide.text}</p>
+    //   </div>
+    //   <img src={rightArrow} className={styles.navArrow + ' ' + styles.next} onClick={next} alt="Next" />
+    // </section>
+
+
+
     <section
       className={styles.hero}
       style={{

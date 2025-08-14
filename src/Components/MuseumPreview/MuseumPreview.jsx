@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styles from './MuseumPreview.module.css';
-import { ArrowLeft, ArrowRight, Play } from 'phosphor-react';
+import { ArrowLeft, ArrowRight, Play } from '@phosphor-icons/react';
 
 // Import images
 import video1 from '../../Assets/vidsThumbnails/vidImg1.png';
@@ -139,7 +139,7 @@ const MuseumPreview = () => {
               <a href={video.link} target="_blank" rel="noopener noreferrer" className={styles.imageWrapper}>
                 <img src={video.image} alt={video.title} />
                 <div className={styles.playOverlay}>
-                  <Play size={32} weight="fill"/>
+                  <Play size={32} weight="fill" />
                 </div>
               </a>
               <div className={styles.info}>

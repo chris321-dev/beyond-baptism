@@ -69,7 +69,7 @@ const Footer = () => {
           {/* <span className='phone info1'>+123 456 7890</span>
           <span className='email info1'>email@gmail.com</span> */}
           <span className="phone info1">
-            <a href="tel:+19736101346">+1 (973) 610-1346</a>
+            <a href="tel:+19736101346">+1 (973) 610-1346 </a>
           </span>
           <span className="email info1">
             <a href="mailto:info@beyondbaptism.com">info@beyondbaptism.com</a>

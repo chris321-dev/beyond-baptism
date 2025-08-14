@@ -51,6 +51,8 @@
   right: 20px;
 }
 
+
+
 .timerBar {
   position: absolute;
   bottom: 0;
@@ -89,4 +91,8 @@
     min-height: 95vh;
   }
 } 
+
+
+
+
 

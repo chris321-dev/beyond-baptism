@@ -8,7 +8,7 @@ import GratitudeSection from './GratitudeSection';
 import bulbIcon from '../../Assets/crossIcon.png';
 import giftIcon from '../../Assets/cupIcon.png';
 
-import { Quotes } from 'phosphor-react';
+import { Quotes } from '@phosphor-icons/react';
 
 const DonateSection = () => {
 
@@ -79,7 +79,7 @@ const DonateSection = () => {
 
     <PricingToggle />
 
-    <hr className={styles.line1} />
+    <hr className={styles.line1} /> 
 
     <GratitudeSection />
 

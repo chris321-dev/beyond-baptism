@@ -187,7 +187,17 @@
 
 
 
+/* .volunteerSection {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
 
+/* .container {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+} */
 
 .heading11 {
   font-size: 1.75rem;
@@ -228,9 +238,8 @@
     font-size: 1.5rem;
   }
 
-/*   .container11 {
+  /* .container11 {
     padding: 0 0.5rem;
   } */
 }
-
 

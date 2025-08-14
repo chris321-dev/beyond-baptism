@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './JobModal.module.css';
-import { CaretRight } from 'phosphor-react';
+import { CaretRight } from '@phosphor-icons/react';
 
 const JobModal = ({ job, onClose }) => {
   const [openSection, setOpenSection] = useState(null);
@@ -83,7 +83,7 @@ const JobModal = ({ job, onClose }) => {
             </ul>
           )}
 
-{/*           <div
+          {/* <div
             className={styles.dropdownHeader}
             onClick={() => toggleSection('timeCommitment')}
           >
@@ -101,18 +101,26 @@ const JobModal = ({ job, onClose }) => {
               ))}
             </ul>
           )} */}
-          
         </div>
 
-{/*         <div className={styles.section}>
+        {/* <div className={styles.section}>
           <h4>Salary & Work Hours</h4>
           <p><strong>Salary:</strong> {job.details.salary}</p>
           <p><strong>Work Hours:</strong> {job.details.workHours}</p>
         </div> */}
 
         <div className={styles.section}>
-          
-           {job.type === 'Paid' && (
+          {/* <h4>{job.type === 'Paid' ? 'Salary & Work Hours' : 'Work Hours'}</h4> */}
+
+          {/* {job.type === 'Paid' && (
+            <h4>Salary & Volunteer Hours</h4>
+          )}
+
+          {job.type === 'Paid' && (
+            <p><strong>Salary:</strong> {job.details.salary}</p>
+          )} */}
+
+          {job.type === 'Paid' && (
             <h4>
               {job.title === 'IT Coordinator'
                 ? 'Stipend & Volunteer Hours'
@@ -130,9 +138,8 @@ const JobModal = ({ job, onClose }) => {
           )}
 
           <p><strong>Volunteer Hours :</strong> {job.details.workHours}</p>
-
         </div>
-        
+
       </div>
     </div>
   );

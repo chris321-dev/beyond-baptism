@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './AwakenSection.module.css';
 import veilImage from '../../Assets/veilRemovedPoster.webp'; // Replace with your actual path
 import bgImage from '../../Assets/bgImage22.webp'; // Background image used in section
-import { CaretDown } from 'phosphor-react';
+import { CaretDown } from '@phosphor-icons/react';
 
 const AwakenSection = () => {
   return (
@@ -21,7 +21,7 @@ const AwakenSection = () => {
             <a href="https://www.youtube.com/watch?v=OOLZDaTgIaM" target="_blank" rel="noreferrer" className={styles.watchBtn}>
               Watch Now
             </a>
-{/*             <a className={styles.watchBtn}>
+            {/* <a className={styles.watchBtn}>
               Watch Now
             </a> */}
           </div>

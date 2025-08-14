@@ -4,7 +4,7 @@ import styles from "./TeamContext.module.css";
 const TeamContext = () => {
   return (
     <>
-    <hr className={styles.line1} />    
+    <hr className={styles.line1}></hr>    
     <section className={styles.aboutSection}>
       <p>
         At <strong>Beyond Baptism</strong>, our mission thrives on the faith,

@@ -17,6 +17,7 @@ const Volunteer = () => {
             <img src={folderImg} alt="folders" className={styles.folderImg} />
         </div>
       </div>
+      
 
       <div className={styles.container11}>
         <h2 className={styles.heading11}>
@@ -55,6 +56,7 @@ const Volunteer = () => {
         <p className={styles.cta11}><strong>Join Beyond Baptism today. Help lead others home.</strong></p>
       </div>
 
+
       <div className={styles.allPositions}>
         <h3><img src={micIcon} alt="mic" className={styles.micIcon} /> All positions</h3>
         <div className={styles.grid}>
@@ -81,7 +83,7 @@ const Volunteer = () => {
         </div>
       </div>
 
-{/*       <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} /> */}
+      {/* <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} /> */}
 
       {selectedJob && (
         <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} />

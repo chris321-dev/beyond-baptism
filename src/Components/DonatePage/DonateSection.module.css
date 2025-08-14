@@ -186,7 +186,8 @@
     height: 1px;
     background-color: #777; 
   }
-  
+
+
   
   /* Responsive: stack on smaller screens */
   @media (max-width: 768px) {

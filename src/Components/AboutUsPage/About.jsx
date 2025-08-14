@@ -1,6 +1,6 @@
 // About.jsx
 import React, { useState } from 'react'
-import { ArrowLeft, ArrowRight, Play } from 'phosphor-react'
+import { ArrowLeft, ArrowRight, Play } from '@phosphor-icons/react'
 import styles from './About.module.css'
 import aboutUsImg from '../../Assets/aboutUs1.webp';
 
