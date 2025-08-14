@@ -12,11 +12,6 @@
   margin-bottom: 30px;
 }
 
-.header h2 {
-  color: #fcbf49;
-  font-size: 1.8rem;
-}
-
 .galleryWrapper {
   display: flex;
   align-items: center;
@@ -33,17 +28,42 @@
   z-index: 2;
 }
 
+.gradientText {
+  font-size: 1.8rem; 
+  background: linear-gradient(150deg, #F3C365, #FBF0DE); /* gold gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
 .gallery {
   display: flex;
   gap: 30px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 10px 0;
+  /*  */
+  
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin; /* or 'auto' or 'none' */
+  scrollbar-color: #999 rgb(204, 204, 204, 0.1);
 }
 
-/* .gallery::-webkit-scrollbar {
-  display: none;
-} */
+.gallery::-webkit-scrollbar {
+  height: 4px; 
+}
+
+.gallery::-webkit-scrollbar-track {
+  background: rgb(204, 204, 204, 0.1);
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+}
+
 
 .card {
   background: rgba(255, 255, 255, 0.05);
@@ -53,6 +73,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  scroll-snap-align: center;
 }
 
 .imageWrapper {
@@ -88,7 +109,7 @@
 }
 
 .playOverlay:hover {
-  color: red;
+  color: rgb(245, 85, 85);
 }
 
 .info {
@@ -117,6 +138,19 @@
   text-decoration: underline;
 }
 
+
+@media (min-width: 769px) {
+  .gallery {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
+  .gallery::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari */
+  }
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .museum {
@@ -138,3 +172,18 @@
     font-size: 1.5rem;
   }
 }
+
+
+@media (max-width: 400px) {
+  .card {
+    min-width: 85%;
+    width: 85%;
+    scroll-snap-align: center;
+  }
+
+  .gallery {
+    padding: 10px;
+    gap: 15px;
+  }
+}
+
