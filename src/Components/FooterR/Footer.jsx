@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { NavLink } from "react-router-dom";
 import Alert from '../Alert/Alert';
 
 //imported icons 
@@ -18,9 +19,9 @@ const Footer = () => {
 
         <div className='logoDiv'>
           <div className='footerLogo'  >
-            <a href='#'>
+            <NavLink to="/">
             <img  src={imageLogo} alt='logo' className='logo1'/>
-            </a>
+            </NavLink>
           </div>        
 
           {/* <div className='socials flex' >
@@ -33,16 +34,16 @@ const Footer = () => {
         <div className='footerLinks'>
           <span className='linkTitle'>Information</span>
           <li>
-            <a href='#'>Home</a>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>            
-            <a>About Us</a>            
+            <NavLink to="/aboutus?section=about">About Us</NavLink>           
           </li>
           <li>            
-            <a>Parish Benefits</a>            
+            <NavLink to="/parishbenefits">Parish Benefits</NavLink>           
           </li>
           <li>            
-            <a>Posts</a>            
+            <NavLink to="/parishbenefits#testimonials">Testimonials</NavLink>          
           </li>
         </div>
 
@@ -74,11 +75,30 @@ const Footer = () => {
           <span className="email info1">
             <a href="mailto:info@beyondbaptism.com">info@beyondbaptism.com</a>
           </span>
-          <div className='socials flex info1' >
+          {/* <div className='socials flex info1' >
             <ImFacebook className='icon' />
             <BsTwitter className='icon' />
             <AiFillInstagram className='icon' />
+          </div> */}
+          
+          <div className="socials flex info1">
+            <a 
+              href="https://www.facebook.com/people/Beyond-Baptism/61566182015276/?_rdr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <ImFacebook className="icon" />
+            </a>
+            <a 
+              href="https://www.instagram.com/beyond_baptism?igsh=MTdwc3hwNGh5ZDhibw==" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <AiFillInstagram className="icon" />
+            </a>
           </div>
+
+
         </div>
 
         {/* </div> */}
