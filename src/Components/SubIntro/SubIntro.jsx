@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import './SubIntro.css';
-import Alert from '../Alert/Alert';
 import img1 from "../../Assets/graceimg1.png";
 
 const SubIntro = () => {
@@ -22,14 +21,12 @@ const SubIntro = () => {
 {/*         <button className="learnMoreBtn btn"><Alert><a className='btn11'>Learn More</a></Alert></button> */}
         
         <button className="learnMoreBtn btn">
-          <Alert>
             <NavLink 
               to="/parishbenefits?section=parishbenefits" 
               className={({ isActive }) => isActive ? "btn11 active" : "btn11"}
             >
               Learn More
             </NavLink>
-          </Alert>
         </button>
         
       </div>
@@ -78,6 +75,7 @@ export default SubIntro;
 // };
 
 // export default SubIntro;
+
 
 
 
