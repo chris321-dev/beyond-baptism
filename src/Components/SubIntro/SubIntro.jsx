@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './SubIntro.css';
 import Alert from '../Alert/Alert';
 import img1 from "../../Assets/graceimg1.png";
@@ -18,7 +19,16 @@ const SubIntro = () => {
           Can your parish grow through a Eucharist-centered approach? Let Beyond Baptism help
           your parish come alive in the presence of Christ.
         </p>
-        <button className="learnMoreBtn btn"><Alert><a className='btn11'>Learn More</a></Alert></button>
+{/*         <button className="learnMoreBtn btn"><Alert><a className='btn11'>Learn More</a></Alert></button> */}
+        
+        <button className="learnMoreBtn btn">
+          <Alert>
+            <Link to="/parishbenefits" className="btn11">
+              Learn More
+            </Link>
+          </Alert>
+        </button>
+        
       </div>
       <div className="imagePlaceholder">
       <img src={img1} alt="Church" className="centeredImage" />
@@ -65,4 +75,5 @@ export default SubIntro;
 // };
 
 // export default SubIntro;
+
 
