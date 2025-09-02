@@ -27,7 +27,11 @@ const AwakenSection = () => {
           </div>
 
           <p className={styles.credits}>
-            Special thanks to the <a>creators</a> of this impactful film for illuminating the true presence of Christ in the Eucharist.
+            Special thanks to the{" "}
+            <a href="http://theveilremoved.com/" target="_blank" rel="noopener noreferrer">
+              creators
+            </a>{" "}
+            of this impactful film for illuminating the true presence of Christ in the Eucharist.
           </p>
         </div>
 
