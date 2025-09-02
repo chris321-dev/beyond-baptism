@@ -39,6 +39,11 @@
   background: var(--primaryColorLight);
   /* color: var(--primaryColor); */
 }
+.footer .secContainer .footerLinks .socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 .footer .secContainer .footerLinks {
   display: grid;
   row-gap: 0.2rem;
