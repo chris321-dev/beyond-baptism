@@ -2,7 +2,6 @@ import React from 'react';
 import s from './Section1.module.css';
 import cn from 'classnames';
 import img from "../../Assets/playIcon.png";
-import Alert from '../Alert/Alert';
 
 
 //  s = style
@@ -128,4 +127,5 @@ const Section1 = () => {
 };
 
 export default Section1;
+
 
