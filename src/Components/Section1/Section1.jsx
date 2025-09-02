@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 import s from './Section1.module.css';
 import cn from 'classnames';
 import img from "../../Assets/playIcon.png";
@@ -127,5 +128,6 @@ const Section1 = () => {
 };
 
 export default Section1;
+
 
 
