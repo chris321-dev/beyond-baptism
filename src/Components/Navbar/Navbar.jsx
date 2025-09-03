@@ -108,14 +108,14 @@ if (
   return (
     <header className={headerClasses}>
       {/* Sub‑nav (stays visible on all sizes) */}
-      <div className={styles.subNav}>
+{/*       <div className={styles.subNav}>
         <ul className={styles.subList}>
           <li><Link to="/"><MagnifyingGlass size={17} />&nbsp;<span className={styles.showIcon}>Search</span></Link></li>
           <li><Link to="/under-construction">|&nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.showIcon}><Newspaper size={17} /></span>&nbsp;Blog</Link></li>
           <li><Link to="/under-construction">|&nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.showIcon}><UserCircle size={17} /></span>&nbsp;Virtual Museum</Link></li>
           <li className={styles.lang}><img src={icon1} alt="EN" />EN</li>
         </ul>
-      </div>
+      </div> */}
 
       {/* Main nav */}
       <div className={navClasses}>
