@@ -62,9 +62,9 @@
 .footer .secContainer .info1 a:hover {
   color: #fff;
 }
-.footer .secContainer .footerLinks li:hover {
+/* .footer .secContainer .footerLinks li:hover {
   transform: translate(10px);
-}
+} */
 .footer .secContainer .footerLinks li:hover a {
   color: #fff;
 }
@@ -102,12 +102,10 @@
 @media (min-width: 640px) {
   .secContainer {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (min-width: 640px) {
-  .secContainer {
     padding: 2rem 0;
-    grid-template-columns: repeat(4, 1fr);
   }
+  .footer .secContainer .footerLinks li:hover {
+    transform: translate(10px);
+  }
+  
 }
-
