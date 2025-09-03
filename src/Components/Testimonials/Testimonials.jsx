@@ -15,7 +15,7 @@ const Testimonials = ({ id }) => {
   }, []);
 
   const isLg = vw >= 1100;
-  const isSm = vw < 830;
+  const isSm = vw < 910;
   const isMd = !isLg && !isSm;
 
   const total = testimonialsData.length;
@@ -48,7 +48,7 @@ const Testimonials = ({ id }) => {
       } else if (i === prevIndex) {
         // Left, slightly overlapped
         style = {
-          transform: "translateX(-142%) scale(0.92)",
+          transform: "translateX(-150%) scale(0.9)",
           opacity: 1,
           zIndex: 2,
           pointerEvents: "auto",
@@ -56,7 +56,7 @@ const Testimonials = ({ id }) => {
       } else if (i === nextIndex) {
         // Right, slightly overlapped
         style = {
-          transform: "translateX(38%) scale(0.92)",
+          transform: "translateX(50%) scale(0.9)",
           opacity: 1,
           zIndex: 2,
           pointerEvents: "auto",
@@ -67,7 +67,7 @@ const Testimonials = ({ id }) => {
       //i later used 3 instead
        if (i === currentIndex) {
         style = {
-          transform: "translateX(-50%) scale(1)",
+          transform: "translateX(-50%) scale(0.89)",
           opacity: 1,
           zIndex: 3,
           pointerEvents: "auto",
@@ -75,7 +75,7 @@ const Testimonials = ({ id }) => {
       } else if (i === prevIndex) {
         // Left, slightly overlapped
         style = {
-          transform: "translateX(-120%) scale(0.92)",
+          transform: "translateX(-140%) scale(0.85)",
           opacity: 1,
           zIndex: 2,
           pointerEvents: "auto",
@@ -83,7 +83,7 @@ const Testimonials = ({ id }) => {
       } else if (i === nextIndex) {
         // Right, slightly overlapped
         style = {
-          transform: "translateX(20%) scale(0.92)",
+          transform: "translateX(40%) scale(0.85)",
           opacity: 1,
           zIndex: 2,
           pointerEvents: "auto",
