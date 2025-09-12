@@ -1,0 +1,38 @@
+.container {
+  margin-top: 100px;
+  padding: 60px 20px;
+}
+
+.termsConditionsSection {
+    /* padding: 40px 20px; */
+    max-width: 1200px;
+    margin: 0 auto;  
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .termsConditionsSection h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+   }
+
+  .termsConditionsSection h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  .termsConditionsSection p {
+    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+  }
+
+
+  /* @media (max-width: 992px) {
+    .privacySection {
+      margin: 20px auto;  
+    }
+  } */
+  

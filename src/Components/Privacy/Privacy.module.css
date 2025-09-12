@@ -1,0 +1,61 @@
+.container {
+  margin-top: 100px;
+  padding: 60px 20px;
+}
+
+.privacySection {
+    /* padding: 40px 20px; */
+    max-width: 1200px;
+    margin: 0 auto;  
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .privacySection h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+   }
+
+  .privacySection h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  .privacySection p {
+    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+  }
+
+  .privacySection ul {
+    list-style-type: none;
+    padding-left: 1.7rem;
+    margin-top: 10px;
+  }
+
+  .privacySection li {
+    position: relative;
+    margin-bottom: 1.2rem;
+    font-size: 1.15rem;
+    padding-left: 25px;
+  }
+
+  .privacySection li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -3.5px;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.5rem;
+    }
+
+
+  /* @media (max-width: 992px) {
+    .privacySection {
+      margin: 20px auto;  
+    }
+  } */
+  
