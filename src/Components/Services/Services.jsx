@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import s from "./Services.module.css";
 
 import img2 from '../../Assets/image-4.webp';
@@ -37,10 +38,12 @@ function Services() {
           discipleship, and support for pastors, fostering vocations and a
           vibrant community.
         </p>
-        <button className={s.cardBtn}>
-          <span className={s.btnText}> Discover </span>
-          <span className={s.arrowIcon}>↗</span>
-        </button>
+        <NavLink to="/parishbenefits">
+          <button className={s.cardBtn}>
+            <span className={s.btnText}> Discover </span>
+            <span className={s.arrowIcon}>↗</span>
+          </button>
+        </NavLink>
       </div>
 
       {/* Card 2 */}
@@ -59,10 +62,12 @@ function Services() {
         <p className={s.cardText}>
           Join us in our journey to help your parish flourish.
         </p>
-        <button className={s.cardBtn}>
-        <span className={s.btnText}> Volunteer </span>
-          <span className={s.arrowIcon}>↗</span>
-        </button>
+        <NavLink to="/volunteer?section=volunteer">
+          <button className={s.cardBtn}>
+          <span className={s.btnText}> Volunteer </span>
+            <span className={s.arrowIcon}>↗</span>
+          </button>
+        </NavLink>
       </div>
 
       {/* Card 3 */}
@@ -82,10 +87,12 @@ function Services() {
           We provide our services FREE to all parishes. Your support means
           everything to us.
         </p>
-        <button className={s.cardBtn}>
-          <span className={s.btnText}> Donate </span>
-          <span className={s.arrowIcon}>↗</span>
-        </button>
+        <NavLink to="/donate?section=donate">
+          <button className={s.cardBtn}>
+            <span className={s.btnText}> Donate </span>
+            <span className={s.arrowIcon}>↗</span>
+          </button>
+        </NavLink>
       </div>
     </div>
   </div>
@@ -95,3 +102,4 @@ function Services() {
 }
 
 export default Services;
+

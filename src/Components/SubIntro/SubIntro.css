@@ -80,6 +80,10 @@
   background-color: #d45656 !important;
 }
 
+.learnMoreBtn .btn11 {
+  color: var(--whiteColor);
+}
+
 .imagePlaceholder {
   display: flex;
   justify-content: center;
@@ -113,3 +117,4 @@
     display: none;
   }
 }
+

@@ -11,13 +11,13 @@ import heroBanner2S from '../../Assets/heroBanner2S.webp'; // small-screen versi
 const slides = [
   {
     sub: 'DISCOVER',
-    title: 'A National Ministry of Catholic Laity',
+    title: 'A Ministry for the Catholic Laity',
     text: 'Changing Lives Through Eucharistic Encounters with Jesus Christ',
     img: heroBanner1,
   },
    {
     sub: 'DISCOVER',
-    title: 'A National Ministry of Catholic Laity',
+    title: 'A Ministry for the Catholic Laity',
     text: 'Changing Lives Through Eucharistic Encounters with Jesus Christ',
     img: heroBanner2,
     imgMobile: heroBanner2S,
