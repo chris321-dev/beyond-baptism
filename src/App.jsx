@@ -22,6 +22,8 @@ import About from "./Components/AboutUsPage/About";
 import Volunteer from "./Components/VolunteerPage/Volunteer";
 import ContactUs from "./Components/ContactUsPage/ContactUs";
 import NotFound from "./Components/NotFound/NotFound";
+import Privacy from "./Components/Privacy/Privacy";
+import TermsConditions from "./Components/TermsConditions/TermsConditions";
 
 function App() {
   const [loading, setLoading] = useState(true); // Track the loading state
@@ -66,6 +68,8 @@ function App() {
             <Route path="/parishbenefits" element={<ParishBenefits />} />
             <Route path="/volunteer" element={<Volunteer />} />
             <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/privacy-statement" element={<Privacy />} />
+            <Route path="/terms-and-conditions" element={<TermsConditions />} />
             <Route path="*" element={<NotFound />} /> { /* for invalid paths */}
           </Routes>
           <Footer />
