@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './AwakenSection.module.css';
 import veilImage from '../../Assets/veilRemovedPoster1.webp';
 import bgImage from '../../Assets/bgImage22.webp'; // Background image used in section
-import { CaretDown } from '@phosphor-icons/react';
+import { ArrowDown } from '@phosphor-icons/react';
 
 const AwakenSection = () => {
   return (
