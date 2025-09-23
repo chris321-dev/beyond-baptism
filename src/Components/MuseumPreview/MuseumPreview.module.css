@@ -16,8 +16,8 @@
   width: 30px;
   height: 30px;
   margin-right: 12px;
-  background-color: #1a141c; /* inner background */
-  border: 2px solid #555;   /* border color */
+  background-color: #170D19; /* inner background */
+  border: 2px solid #474047;   /* border color */
   transform: rotate(45deg); /* diamond shape */
   display: flex;
   align-items: center;
