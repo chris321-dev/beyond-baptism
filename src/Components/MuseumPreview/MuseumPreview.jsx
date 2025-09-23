@@ -127,7 +127,7 @@ const MuseumPreview = () => {
     <section className={styles.museum}>
       <div className={styles.header}>
         <div className={styles.diamondBtn}>
-          <ArrowRight className={styles.icon1} size={20} color="#fcbf49" />
+          <ArrowRight className={styles.icon1} size={20} color="#ECAE48" />
         </div>
         <h2 className={styles.gradientText}>Eucharistic Museum Preview</h2>
       </div>
