@@ -12,6 +12,28 @@
   margin-bottom: 30px;
 }
 
+.diamondBtn {
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+  background-color: #1a141c; /* inner background */
+  border: 2px solid #555;   /* border color */
+  transform: rotate(45deg); /* diamond shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #fcbf49;
+  }
+}
+
+.icon1 {
+  transform: rotate(-45deg); /* rotate arrow back upright */
+}
+
 .galleryWrapper {
   display: flex;
   align-items: center;
@@ -154,7 +176,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .museum {
-    padding: 60px 5px;
+    padding: 60px 12px;
   }
   .header h2 {
     font-size: 1.4rem;
