@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './AwakenSection.module.css';
-import veilImage from '../../Assets/veilRemovedPoster1.webp'; // Replace with your actual path
+import veilImage from '../../Assets/veilRemovedPoster1.webp';
 import bgImage from '../../Assets/bgImage22.webp'; // Background image used in section
 import { CaretDown } from '@phosphor-icons/react';
 
