@@ -55,13 +55,13 @@ const Footer = () => {
             <a href='#'>Branch</a>
           </li> */}
           <li>
-            <a>Support</a>
+            <NavLink to="/contactus">Contact Us</NavLink>
           </li>
           <li>
-            <a>Terms & Condition</a>
+            <NavLink to="/terms-and-conditions">Terms & Condition</NavLink>
           </li>
           <li>
-            <a>Privacy</a>
+            <NavLink to="/privacy-statement">Privacy</NavLink>
           </li>
         </div>
 
