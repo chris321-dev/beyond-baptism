@@ -10,12 +10,16 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 140px; /* Adjust this to fit the design */
-  background-image: url('../../Assets/Vector2.png'); /* Replace with the actual path to your image */
-  background-size: cover; /* Ensures the image covers the area */
-  background-repeat: no-repeat; /* Prevents tiling */
-  background-position: left bottom; /* Aligns the image to the bottom left */
-  z-index: -1; /* Places it behind the content */
+  height: 140px; /* Make taller if needed so both images fit */
+  background-image: url('../../Assets/Vector2.png'), url('../../Assets/Vector3.png');
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+
+  /* Position first image lower, second one a bit higher */
+  background-position: left bottom, left 15px; 
+  /* first (Vector2) sticks to bottom, second (Vector3) shifted up 40px */
+  
+  z-index: -1;
   max-width: 800px;
 }
 
@@ -40,6 +44,7 @@
 }
 
 .subtitle {
+  padding: 20px 0px;
   font-size: 1.1rem;
   color: #ff8c00;
   font-weight: bold;
@@ -71,13 +76,13 @@
   color: var(--whiteColor);
   margin-top: 15px;
   border-radius: 0;
-  background-color: #D96B6B !important;
+  background-color: #EA4524 !important;
   font-weight: bold;
 }
 
 .learnMoreBtn:hover {
   color: var(--whiteColor);
-  background-color: #d45656 !important;
+  background-color: #f7593a !important;
 }
 
 .learnMoreBtn .btn11 {
@@ -104,6 +109,10 @@
     grid-template-columns: 1fr;
   }
 
+  .subtitle {
+    padding: 0px;
+  }
+
   .title {
     margin-top: 15px;
     font-size: 2.4rem;
@@ -117,4 +126,5 @@
     display: none;
   }
 }
+
 
