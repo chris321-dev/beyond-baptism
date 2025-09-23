@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './AwakenSection.module.css';
-import veilImage from '../../Assets/veilRemovedPoster.webp'; // Replace with your actual path
+import veilImage from '../../Assets/veilRemovedPoster1.webp';
 import bgImage from '../../Assets/bgImage22.webp'; // Background image used in section
-import { CaretDown } from '@phosphor-icons/react';
+import { ArrowDown } from '@phosphor-icons/react';
 
 const AwakenSection = () => {
   return (
@@ -40,8 +40,8 @@ const AwakenSection = () => {
         </div>
       </div>
 
-      <div className={styles.scrollIcon}>
-        <CaretDown size={32} color="#fcbf49" weight="bold" />
+      <div className={styles.diamondBtn}>
+        <ArrowDown className={styles.icon1} size={30} color="#ECAE48" />
       </div>
     </section>
   );

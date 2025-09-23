@@ -1,7 +1,7 @@
 .awakenSection {
   background: url('../../Assets/bgImage22.webp') no-repeat center center;
   background-size: cover;
-  padding: 60px 20px;
+  padding: 90px 20px;
   color: #fff;
   position: relative;
 }
@@ -87,11 +87,36 @@
 }
 
 .imageBox img {
-  max-width: 100%;
-  height: auto;
-  border: 2px solid #fff;
-  border-radius: 8px;
+  max-width: 75%;
+  height: 600px;
 }
+
+.diamondBtn {
+  width: 60px;
+  height: 60px;
+  background-color: #170D19; /* inner background */
+  border: 2px solid #474047;   /* border color */
+  transform: rotate(45deg); /* diamond shape */
+  
+  transform: translateX(-50%) rotate(45deg); /* ✅ center + diamond shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: -27px;
+  left: 50%;
+
+  &:hover {
+    border-color: #fcbf49;
+  }
+}
+
+.icon1 {
+  transform: rotate(-45deg); /* rotate arrow back upright */
+}
+
 
 /* Downward arrow */
 .scrollIcon {
@@ -102,6 +127,12 @@
 }
 
 /* RESPONSIVE */
+@media (max-width: 1024px) {
+  .imageBox img {
+    height: 500px;
+  }
+}
+
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
@@ -114,6 +145,10 @@
 
   .meta {
     justify-content: center;
+  }
+
+  .imageBox img {
+    max-width: 100%;
   }
 
   .scrollIcon {
