@@ -3,14 +3,14 @@ import styles from './MuseumPreview.module.css';
 import { ArrowLeft, ArrowRight, Play } from '@phosphor-icons/react';
 
 // Import images
-import video1 from '../../Assets/vidsThumbnails/vidImg1.png';
-import video2 from '../../Assets/vidsThumbnails/vidImg2.png';
-import video3 from '../../Assets/vidsThumbnails/vidImg3.png';
-import video4 from '../../Assets/vidsThumbnails/vidImg4.png';
-import video5 from '../../Assets/vidsThumbnails/vidImg5.png';
-import video6 from '../../Assets/vidsThumbnails/vidImg6.png';
-import video7 from '../../Assets/vidsThumbnails/vidImg7.png';
-import video8 from '../../Assets/vidsThumbnails/vidImg8.png';
+import video1 from '../../Assets/vidsThumbnails/vidImg1.webp';
+import video2 from '../../Assets/vidsThumbnails/vidImg2.webp';
+import video3 from '../../Assets/vidsThumbnails/vidImg3.webp';
+import video4 from '../../Assets/vidsThumbnails/vidImg4.webp';
+import video5 from '../../Assets/vidsThumbnails/vidImg5.webp';
+import video6 from '../../Assets/vidsThumbnails/vidImg6.webp';
+import video7 from '../../Assets/vidsThumbnails/vidImg7.webp';
+import video8 from '../../Assets/vidsThumbnails/vidImg8.webp';
 
 const videoData = [
   {
