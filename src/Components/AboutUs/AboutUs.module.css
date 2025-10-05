@@ -33,7 +33,7 @@
 }
 
 .description {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   color: #4D4D4D;
   max-width: 90%;
   margin: 0 0 15px;
@@ -83,4 +83,5 @@
   /* .imagePlaceholder {
       display: none;
   } */
+
 }
