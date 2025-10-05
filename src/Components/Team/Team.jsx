@@ -9,6 +9,8 @@ import img5 from "../../Assets/teamImg/img5.png";
 import img6 from "../../Assets/teamImg/img6.png";
 import img7 from "../../Assets/teamImg/img7.png";
 import img8 from "../../Assets/teamImg/img8.png";
+import img9 from "../../Assets/teamImg/img9.png";
+import img10 from "../../Assets/teamImg/img10.png";
 import icon1 from "../../Assets/teamImg/icon1.png";
 
 
@@ -21,6 +23,8 @@ const teamData = [
   { id: 6, name: 'Russell Petrocelli', role: 'Advisory Council', category: 'advisory-council', img: img6 },
   { id: 7, name: 'Rich Mikelinich', role: 'Director of Technology', category: 'technology-director', img: img7 },
   { id: 8, name: 'Shannon Coyle', role: 'Content Manager', category: 'content-manager', img: img8 },
+  { id: 9, name: 'Matthew Pittman', role: 'Design Lead', category: 'technology-director', img: img9 },
+  { id: 10, name: 'Christian Okafor', role: 'Lead Developer', category: 'technology-director', img: img10 },
 ];
 
 const categories = [
