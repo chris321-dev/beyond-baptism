@@ -78,6 +78,7 @@
   border-radius: 0;
   background-color: #EA4524 !important;
   font-weight: bold;
+  box-shadow: 0 0 12px rgba(234, 69, 36, 0.7);
 }
 
 .learnMoreBtn:hover {
@@ -126,5 +127,6 @@
     display: none;
   }
 }
+
 
 
