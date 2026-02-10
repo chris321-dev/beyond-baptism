@@ -79,7 +79,7 @@ export default function About() {
       <hr className={styles.line1} /> 
 
       {/* ====== SLIDER ====== */}
-      <section className={styles.slider}>
+      <section className={styles.slider} key={idx}>
         <div className={styles.pager}>
           <span className={styles.current}>
             {String(idx + 1).padStart(2, '0')}
