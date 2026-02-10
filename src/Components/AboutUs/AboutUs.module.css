@@ -37,6 +37,7 @@
   color: #4D4D4D;
   max-width: 90%;
   margin: 0 0 15px;
+  line-height: 1.5;
 }
 
 .imagePlaceholder {
@@ -85,3 +86,4 @@
   } */
 
 }
+
