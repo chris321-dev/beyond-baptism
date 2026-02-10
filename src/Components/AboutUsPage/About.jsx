@@ -58,7 +58,7 @@ export default function About() {
           <div className={styles.content}>
             <h2 className={styles.title}>
               Be the Light: <br />
-              Give Hope, <span className={styles.highlight}>Share Love</span>
+              <span className={styles.highlight}>Give Hope, Share Love</span>
             </h2>
             <p className={styles.text}>
               Join us in this important mission as we work together.
@@ -75,6 +75,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <hr className={styles.line1} /> 
 
       {/* ====== SLIDER ====== */}
       <section className={styles.slider}>
@@ -104,7 +106,7 @@ export default function About() {
         </div>
       </section>
 
-      <hr className={styles.line1} /> 
+      <hr className={styles.line2} /> 
 
       <ContactForm />
 
