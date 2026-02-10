@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import s from "./Services.module.css";
-
+import { Heart
+} from '@phosphor-icons/react';
 import img2 from '../../Assets/image-4.webp';
-import img3 from '../../Assets/heartIcon.png';
+// import img3 from '../../Assets/heartIcon.png';
 import img4 from '../../Assets/image-3.webp';
 import img5 from '../../Assets/image-5.webp';
 
@@ -29,7 +30,8 @@ function Services() {
             className={s.cardImage}
           />
           <div className={s.heartIcon}>
-            <img src={img3} alt="Heart Icon" />
+            {/* <img src={img3} alt="Heart Icon" /> */}
+            <Heart size={26} color="#e63946" alt="Heart Icon" />
           </div>
         </div>
         <h4 className={s.cardTitle}>Transform Your Parish</h4>
@@ -55,7 +57,8 @@ function Services() {
             className={s.cardImage}
           />
           <div className={s.heartIcon}>
-            <img src={img3} alt="Heart Icon" />
+            {/* <img src={img3} alt="Heart Icon" /> */}
+            <Heart size={26} color="#e63946" alt="Heart Icon" />
           </div>
         </div>
         <h4 className={s.cardTitle}>Become a Volunteer</h4>
@@ -79,7 +82,8 @@ function Services() {
             className={s.cardImage}
           />
           <div className={s.heartIcon}>
-            <img src={img3} alt="Heart Icon" />
+            {/* <img src={img3} alt="Heart Icon" /> */}
+            <Heart size={26} color="#e63946" alt="Heart Icon" />
           </div>
         </div>
         <h4 className={s.cardTitle}>Donate Today</h4>
@@ -102,4 +106,3 @@ function Services() {
 }
 
 export default Services;
-
