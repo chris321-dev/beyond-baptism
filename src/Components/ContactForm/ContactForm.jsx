@@ -124,7 +124,7 @@ const ContactForm = () => {
           </div>
 
           <button type="submit" className={styles.sendButton} disabled={sending}>
-            {sending ? 'Sending...' : 'SUMBIT'}
+            {sending ? 'Sending...' : 'SUBMIT'}
           </button>
         </form>
       </div>
