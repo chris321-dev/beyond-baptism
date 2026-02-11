@@ -28,14 +28,14 @@
     text-align: start;
   }
 
-  .title span{
+  .infoTitle span, .title span{
   position: relative;
   display: inline-block;
    z-index: 1;
 }
 
 /* underline bar */
-.title span::after {
+.infoTitle span::after, .title span::after {
   content: "";
   position: absolute;
   left: 0;
