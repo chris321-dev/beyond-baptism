@@ -86,6 +86,15 @@
 .textBox::-webkit-scrollbar-thumb { background: #bbb; border-radius: 6px; }
 .textBox::-webkit-scrollbar-track { background: #eee; }
 
+.textBox::after {
+  content: "";
+  position: sticky;
+  bottom: 0;
+  height: 20px;
+  display: block;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9));
+}
+
 .textBox p {
   font-size: 1.1rem;
   line-height: 1.5;
