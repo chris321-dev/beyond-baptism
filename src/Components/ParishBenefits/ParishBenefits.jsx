@@ -11,7 +11,7 @@ import parishImg from "../../Assets/eucharistBg.webp";
 
 
 const ParishBenefits = () => {
-  const [activeId, setActiveId] = useState(1);
+  const [activeId, setActiveId] = useState(0);
 
   const toggleItem = (id) => {
     setActiveId((prev) => (prev === id ? null : id));
