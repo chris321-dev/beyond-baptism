@@ -301,11 +301,11 @@ if (
                   className={`${styles.sidebarDropdownToggle} ${
                     currentPath.includes("/parishbenefits") ? styles.active : ""
                   }`}
-                  onClick={() => setAboutDropdownOpen(!aboutDropdownOpen)} 
+                  onClick={() => setAboutDropdownOpen1(!aboutDropdownOpen1)} 
                 >
                   <ChartBar size={20} /> Parish Benefits <CaretDown size={15} />
                 </button>
-                {aboutDropdownOpen && (
+                {aboutDropdownOpen1 && (
                   <ul className={styles.sidebarSubmenu}>
                     <li>
                       <Link
