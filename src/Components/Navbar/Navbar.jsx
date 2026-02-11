@@ -96,10 +96,28 @@ if (
   const navClasses    = `${styles.mainNav} ${scrolled ? styles.fixed : ''}`;
   const closeMenu     = () => setMenuOpen(false);
 
-  const handleNavLinkClick = () => {
-    setAboutDropdownOpen(false); // Close About Us dropdown
-    closeMenu(); // Close the sidebar
-  };
+  // const handleNavLinkClick = () => {
+  //   setAboutDropdownOpen(false); // Close About Us dropdown
+  //   closeMenu(); // Close the sidebar
+  // };
+
+  const handleNavLinkClick = (keepOpen = null) => {
+  // Close both first
+  setAboutDropdownOpen(false);
+  setAboutDropdownOpen1(false);
+
+  // Re-open only the one we want to keep
+  if (keepOpen === "about") {
+    setAboutDropdownOpen(true);
+  }
+
+  if (keepOpen === "parish") {
+    setAboutDropdownOpen1(true);
+  }
+
+  closeMenu();
+};
+
 
     // this will capture both pathname + hash/query
   const currentPath = location.pathname + location.hash;
@@ -282,12 +300,12 @@ if (
                 {aboutDropdownOpen && (
                   <ul className={styles.sidebarSubmenu}>
                     <li>
-                      <Link to="/aboutus?section=about" onClick={closeMenu} className={active==='about'?styles.active:''}>
+                      <Link to="/aboutus?section=about" onClick={() => handleNavLinkClick("about")} className={active==='about'?styles.active:''}>
                         About Us
                       </Link>
                     </li>
                     <li>
-                      <Link to="/ourteam?section=team" onClick={closeMenu} className={active==='team'?styles.active:''}>
+                      <Link to="/ourteam?section=team" onClick={() => handleNavLinkClick("about")} className={active==='team'?styles.active:''}>
                         Meet The Team
                       </Link>
                     </li>
@@ -310,7 +328,7 @@ if (
                     <li>
                       <Link
                         to="/parishbenefits"
-                        onClick={closeMenu}
+                        onClick={() => handleNavLinkClick("parish")}
                         className={currentPath === "/parishbenefits" ? styles.active : ""}
                       >
                         Parish Benefits
@@ -319,7 +337,7 @@ if (
                     <li>
                       <Link
                         to="/parishbenefits#testimonials"
-                        onClick={closeMenu}
+                        onClick={() => handleNavLinkClick("parish")}
                         className={
                           currentPath === "/parishbenefits#testimonials"
                             ? styles.active
