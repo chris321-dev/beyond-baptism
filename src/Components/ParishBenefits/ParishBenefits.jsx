@@ -64,12 +64,11 @@ const ParishBenefits = () => {
           Allow Beyond Baptism to Create a{" "}
           <span className={styles.highlight}>Eucharistic Centered Parish</span>
         </h1>
-        <h4>Christ-Centered Renewal</h4>
         <p>
-          Through fostering profound encounters with Jesus in the Eucharist, Beyond Baptism cultivates a deeper discipleship among parishioners. This transformation leads to enriched spiritual growth, a renewed sense of mission, and a vibrant parish life. 
+          Beyond Baptism helps people grow closer to Jesus through the Eucharist. By spending time with Him, parishioners become stronger in their faith and more connected to their church community.
         </p>
         <p>
-          Our Eucharist-centered approach distinguishes us from other ministries and offers practical relief to pastors by providing a structured, spiritually enriching framework for parish growth—with minimal time required from clergy.  
+          What separates Beyond Baptism from other ministries is our mission focuses on the Eucharist. Plus, we support pastors by giving them a clear and meaningful plan for helping their church grow without taking up too much of their time.  
         </p>
         <img src={parishImg} alt="Parish" className={styles.image} />
       </div>
