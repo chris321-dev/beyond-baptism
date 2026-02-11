@@ -90,7 +90,7 @@
   content: "";
   position: sticky;
   bottom: 0;
-  height: 20px;
+  height: 30px;
   display: block;
   background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9));
 }
