@@ -88,7 +88,7 @@
   background-color: #f0f0f0;
   border: none;
   border-radius: 4px;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.2s;
   width: 130px;
@@ -96,15 +96,15 @@
 }
 
 .planButton:hover {
-  background-color: #b1b0b0;
+  background-color: #8f8e8e;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.5),
               -5px -5px 15px rgba(255, 255, 255, 0.3);
 }
 
 .selected {
-  background-color: #999898;
+  background-color: #7e7d7d;
   font-weight: bold;
-  color: white;
+  color: #e2bf4d;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.5),
               -5px -5px 15px rgba(255, 255, 255, 0.3);
             
