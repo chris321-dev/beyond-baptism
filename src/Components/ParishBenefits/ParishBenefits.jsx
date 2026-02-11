@@ -79,15 +79,15 @@ const ParishBenefits = () => {
         <div className={styles.accordion}>
           {benefitsData.map((item) => (
             <div key={item.id} className={styles.card}>
-              <div className={styles.cardHeader}>
+              <div 
+                className={styles.cardHeader}
+                onClick={() => toggleItem(item.id)}
+              >
                 <div className={styles.titleWrapper}>
                   <span className={styles.icon}>{item.icon}</span>
                   <span>{item.title}</span>
                 </div>
-                <button
-                  className={styles.toggleBtn}
-                  onClick={() => toggleItem(item.id)}
-                >
+                <button className={styles.toggleBtn}>
                   {activeId === item.id ? (
                     <Minus size={20} />
                   ) : (
