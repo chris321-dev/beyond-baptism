@@ -31,12 +31,24 @@
 }
 
 .highlight {
-  color: #e78f95; 
+  background: linear-gradient(
+    90deg,
+    #F477B6,
+    #f4b740,
+    #ff6a88
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
 }
 
+
 .left p {
-  line-height: 1.6;
-  font-size: 1.15rem;
+  line-height: 1.5;
+  font-size: 1.25rem;
   color: #000;
 }
 
@@ -47,11 +59,22 @@
 }
 
 .subHeading {
-  color: #e78f95;
   font-size: 1.75rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 35px;
+
+  background: linear-gradient(
+    90deg,
+    #F477B6,
+    #FF886B
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
 }
 
 .accordion {
@@ -72,6 +95,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 }
 
 .titleWrapper {
@@ -85,6 +109,7 @@
 .icon {
   display: flex;
   align-items: center;
+  margin-right: 1rem;
 }
 
 .toggleBtn {

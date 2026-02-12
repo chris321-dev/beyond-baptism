@@ -11,7 +11,7 @@ import parishImg from "../../Assets/eucharistBg.webp";
 
 
 const ParishBenefits = () => {
-  const [activeId, setActiveId] = useState(1);
+  const [activeId, setActiveId] = useState(0);
 
   const toggleItem = (id) => {
     setActiveId((prev) => (prev === id ? null : id));
@@ -64,12 +64,11 @@ const ParishBenefits = () => {
           Allow Beyond Baptism to Create a{" "}
           <span className={styles.highlight}>Eucharistic Centered Parish</span>
         </h1>
-        <h4>Christ-Centered Renewal</h4>
         <p>
-          Through fostering profound encounters with Jesus in the Eucharist, Beyond Baptism cultivates a deeper discipleship among parishioners. This transformation leads to enriched spiritual growth, a renewed sense of mission, and a vibrant parish life. 
+          Beyond Baptism helps people grow closer to Jesus through the Eucharist. By spending time with Him, parishioners become stronger in their faith and more connected to their church community.
         </p>
         <p>
-          Our Eucharist-centered approach distinguishes us from other ministries and offers practical relief to pastors by providing a structured, spiritually enriching framework for parish growth—with minimal time required from clergy.  
+          What separates Beyond Baptism from other ministries is our mission focuses on the Eucharist. Plus, we support pastors by giving them a clear and meaningful plan for helping their church grow without taking up too much of their time.  
         </p>
         <img src={parishImg} alt="Parish" className={styles.image} />
       </div>
@@ -80,15 +79,15 @@ const ParishBenefits = () => {
         <div className={styles.accordion}>
           {benefitsData.map((item) => (
             <div key={item.id} className={styles.card}>
-              <div className={styles.cardHeader}>
+              <div 
+                className={styles.cardHeader}
+                onClick={() => toggleItem(item.id)}
+              >
                 <div className={styles.titleWrapper}>
                   <span className={styles.icon}>{item.icon}</span>
                   <span>{item.title}</span>
                 </div>
-                <button
-                  className={styles.toggleBtn}
-                  onClick={() => toggleItem(item.id)}
-                >
+                <button className={styles.toggleBtn}>
                   {activeId === item.id ? (
                     <Minus size={20} />
                   ) : (

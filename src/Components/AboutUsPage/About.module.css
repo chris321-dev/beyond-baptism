@@ -10,7 +10,7 @@
 
 .AboutSection {
   margin-top: 70px;
-  padding: 60px 20px;
+  padding: 60px 20px 0;
   background-color: #fff;
 }
 
@@ -38,10 +38,30 @@
   text-align: start;
 }
 
-.highlight {
-  background: linear-gradient(to right, #ff8c00, #ffb400);
-  -webkit-background-clip: text;
-  color: transparent;
+.title span{
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* underline bar */
+.title span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1.5px;
+
+  width: 100%;
+  height: 5px;
+
+  background: #E8B77E;
+
+  z-index: -1;
+
+  box-shadow:
+    0 -4px 18px rgba(241, 133, 8, 0.85),
+    0 -2px 28px rgba(232, 183, 126, 0.75);
+
 }
 
 .text {
@@ -97,15 +117,35 @@
 }
 
 
+.line1 {
+  width: 100%;
+  margin: 0 0 60px;
+  padding: 0;
+  border: none;
+  height: 1px;
+  background-color: #E2E2E2; 
+}
+
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* === Slider section === */
 .slider {
   text-align: center;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto 80px;
 }
 .pager {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #888;
   margin-bottom: 12px;
 }
@@ -115,13 +155,16 @@
 .slideTitle {
   font-size: 2rem;
   margin: 8px 0 16px;
+  animation: fadeSlide 0.8s ease both;
 }
 .slideBody {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: #555;
   line-height: 1.5;
   margin-bottom: 32px;
   padding: 0 20px;
+  animation: fadeSlide 0.8s ease both;
+  animation-delay: 0.3s;
 }
 
 .controls {
@@ -153,13 +196,13 @@
   color: #fff;
 }
 
-.line1 {
+.line2 {
   width: 100%;
   margin: 0;
   padding: 0;
   border: none;
   height: 1px;
-  background-color: #777; 
+  background-color: #E2E2E2; 
 }
 
 

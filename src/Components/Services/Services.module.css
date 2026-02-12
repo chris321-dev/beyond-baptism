@@ -87,11 +87,11 @@
   align-items: center;
   justify-content: center;
 }
-
+/* 
 .heartIcon img {
   width: 24px;
   height: 24px;
-}
+} */
 
 .card:hover .heartIcon {
   animation: bounce 2.8s infinite;
@@ -189,3 +189,4 @@
   0%, 100% { transform: translateX(50%) translateY(0);} /* Default position */
   50% { transform: translateX(50%) translateY(-7px); } /* Move up */
 }
+

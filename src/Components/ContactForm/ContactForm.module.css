@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 .contactSection {
   display: flex;
   min-height: 100vh;
@@ -13,12 +16,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border-bottom-right-radius: 100px; */
-}
+} 
+
 
 .formSide h2 {
-  font-size: 2rem;
+  font-size: 4rem !important;
   margin-bottom: 10px;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .formSide p {
@@ -27,7 +31,7 @@
   color: #ccc;
 }
 
-form {
+.contactSection form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -48,33 +52,34 @@ form {
 .contactSection label {
   font-weight: 500;
   margin-bottom: 8px;
-  color: #fff !important;
+  color: #e6e3e3 !important;
   font-size: 1.05rem !important;
 }
 
-label span {
+.contactSection label span {
   color: red;
   margin-left: 2px;
 }
 
-input,
-textarea {
+.contactSection input,
+.contactSection textarea {
   padding: 12px;
   border-radius: 6px;
-  border: 1px solid #c9c7c7;
-  background-color: #e6e4e4;
+  border: 1px solid #999;
+  background-color: rgb(230, 228, 228, 0);
   font-size: 1.05rem;
+  color: #e2e2e2 !important;
 }
 
-input:focus,
-textarea:focus {
+.contactSection input:focus,
+.contactSection textarea:focus {
   border: 2.5px solid #777;
   outline: none; /* removes blue highlight */
   box-shadow: none; /* removes shadow */
 }
 
 
-textarea {
+.contactSection textarea {
   resize: vertical;
 }
 
@@ -83,7 +88,7 @@ textarea {
 }
 
 .sendButton {
-  background-color: white;
+  background-color: #DCD2C8;
   color: #111;
   border: none;
   padding: 10px 25px;
@@ -111,7 +116,8 @@ textarea {
   height: 44px !important;
   border-radius: 6px !important;
   border: 1px solid #c9c7c7 !important;
-  background-color: #e6e4e4 !important;
+  background-color: rgb(230, 228, 228, 0) !important;
+  color: #e2e2e2 !important;
   font-size: 1.05rem !important;
 }
 
