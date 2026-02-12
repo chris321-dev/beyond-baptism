@@ -12,7 +12,9 @@ const Volunteer = () => {
   return (
     <section className={styles.volunteerSection}>
       <div className={styles.header}>
-        <p>Become part of the <strong>Family</strong></p>
+         <p>Be part of the team that <br />
+          <span className={styles.highlight1}> Does God’s Work</span>
+        </p>
         <div className={styles.imageWrapper}>
             <img src={folderImg} alt="folders" className={styles.folderImg} />
         </div>
