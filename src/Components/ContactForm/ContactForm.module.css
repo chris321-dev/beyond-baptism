@@ -31,7 +31,7 @@
   color: #ccc;
 }
 
-form {
+.contactSection form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -56,13 +56,13 @@ form {
   font-size: 1.05rem !important;
 }
 
-label span {
+.contactSection label span {
   color: red;
   margin-left: 2px;
 }
 
-input,
-textarea {
+.contactSection input,
+.contactSection textarea {
   padding: 12px;
   border-radius: 6px;
   border: 1px solid #999;
@@ -71,15 +71,15 @@ textarea {
   color: #e2e2e2 !important;
 }
 
-input:focus,
-textarea:focus {
+.contactSection input:focus,
+.contactSection textarea:focus {
   border: 2.5px solid #777;
   outline: none; /* removes blue highlight */
   box-shadow: none; /* removes shadow */
 }
 
 
-textarea {
+.contactSection textarea {
   resize: vertical;
 }
 
