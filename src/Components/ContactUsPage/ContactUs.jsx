@@ -5,7 +5,6 @@ import 'react-phone-input-2/lib/style.css';
 import styles from './ContactUs.module.css';
 import ContactInfo from './ContactInfo';
 import '../../App.css';
-import imgContact from '../../Assets/contactChurch.webp';
 
 const ContactUs = () => {
   const [form, setForm] = useState({
@@ -71,7 +70,9 @@ const ContactUs = () => {
         </div>
       </div> */}
 
-      <div className={styles.imageSide}></div>
+      <div className={styles.imageSide}>
+        <div className={styles.imageIn}></div>
+      </div>
 
       <div className={styles.formSide}>
         <h2>Contact Us</h2>
