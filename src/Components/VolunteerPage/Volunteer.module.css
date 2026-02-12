@@ -25,13 +25,25 @@
 }
 
 .header p {
-    font-size: 2.6rem;
+    font-size: 1.6rem;
     padding-top: 20px;
 
 }
 
-.header strong {
-    font-size: 2.8rem;
+.highlight1 {
+  font-size: 3.4rem;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #F477B6,
+    #FF886B
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
 }
 
 .folderImg {
