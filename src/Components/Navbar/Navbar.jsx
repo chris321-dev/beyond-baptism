@@ -17,7 +17,7 @@ import {
   SignOut
 } from '@phosphor-icons/react';
 import styles from './Navbar.module.css';
-import logo from '../../Assets/Beyond-Baptism-Logo-white-1.png';
+import logo from '../../Assets/beyondBaptismLogoNew.png';
 import icon1 from '../../Assets/USIcon.png';
 
 const Navbar = () => {
@@ -256,9 +256,13 @@ if (
             <List size={28} weight="bold" />
           </button>
         </div>
+
+        <div className={styles.underline}></div>
+        
+        <div className={styles.underlineText}><h5>Where the Eucharist Transforms Lives and Hearts.</h5></div>
+        
       </div>
 
-      <div className={styles.underline}></div>
 
       {/* Mobile slide‑out menu */}
       {menuOpen && (
