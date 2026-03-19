@@ -1,3 +1,34 @@
+
+:global(.react-tel-input .form-control) {
+  width: 100%;
+  height: 44px;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.8px solid #B1B1B1;
+  font-size: 1.1rem;
+  color: #222;
+  box-shadow: none;
+}
+
+:global(.react-tel-input .form-control:focus) {
+  border: none !important;
+  border-bottom: 2px solid #989898 !important;
+  outline: none;
+  box-shadow: none;
+}
+
+:global(.react-tel-input:focus-within) {
+  box-shadow: none;
+  border: none;
+}
+
+:global(.react-tel-input .form-control:focus-visible) {
+  outline: none;
+}
+
+
+
 .contactUsSection {
   display: flex;
   min-height: 100vh;
@@ -28,7 +59,7 @@
   color: #111;
 }
 
-form {
+.contactUsSection form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -53,36 +84,46 @@ form {
   color: #222 !important;
 }
 
-label span {
+.contactUsSection label span {
   color: red;
   margin-left: 2px;
 }
 
-input,
-textarea {
+.contactUsSection input{
   padding: 12px;
   /* border-radius: 6px; */
-  border-bottom: 1px solid #B1B1B1;
-  /* background-color: #999; */
+  border: none;
+  border-bottom: 1.8px solid #B1B1B1 !important;
+  background-color: rgb(231, 229, 229, 0);
   font-size: 1.1rem;
   color: #222;
 }
 
-input::placeholder,
-textarea::placeholder {
+.contactUsSection textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1.8px solid #B1B1B1 !important;
+  background-color: rgb(231, 229, 229, 0);
+  font-size: 1.1rem;
+  color: #222;
+  resize: vertical;
+}
+
+.contactUsSection input::placeholder,
+.contactUsSection textarea::placeholder {
   color: #999;
 }
 
-input:focus,
-textarea:focus {
-  border: 2.5px solid #999;
+.contactUsSection input:focus{
+  border-bottom: 2px solid #989898 !important;
   outline: none; /* removes blue highlight */
   box-shadow: none; /* removes shadow */
 }
 
-
-textarea {
-  resize: vertical;
+.contactUsSection textarea:focus {
+  border: 2px solid #989898 !important;
+  outline: none; /* removes blue highlight */
+  box-shadow: none; /* removes shadow */
 }
 
 .fullWidth {
@@ -113,67 +154,35 @@ textarea {
   border-radius: 6px;
 }
 
-.phoneInput {
-  width: 100% !important;
-  height: 44px !important;
-  border-radius: 6px !important;
-  border: 1px solid #c9c7c7 !important;
-  background-color: #e6e4e4 !important;
-  font-size: 1.05rem !important;
-}
-
 .ContactUs_formSide__MUUTC {
   color: #fff !important;
 }
 
-/* Right Side Image */
-
-/* .imageSide {
-  flex: 1;
-  background-color: #333;
-} */
-
 .imageSide {
-  background-image: url('../../Assets/55.jpg'); 
-  background-size: cover;
-  background-position: center;
+  background-color: #111317;
   flex: 1;
 }
 
-/* .imageleft {
-  flex: 1;
-  background-color: #333;
-  padding: 60px 0 60px;
-  margin: auto;
-}
-
-.imageWrapper {
-  text-align: center;
-}
-
-.imageSide {
+.imageIn {
+  margin-top: 60px;
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-} */
+  min-height: 600px;
 
-/* .imageleft h2 {
-  font-size: 1.8rem;
-  color: #fff;
-} */
+  background-image: url('../../Assets/contactUsImg.webp'); 
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
 
-
-
-@media screen and (min-width: 768px) and (max-width: 989px) {
+/* @media screen and (min-width: 768px) and (max-width: 989px) {
   .formRow {
     flex-direction: column;
   }
-}
+} */
 
 
 /* Responsive */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .contactSection {
     flex-direction: column;
     margin-top: 35px;
