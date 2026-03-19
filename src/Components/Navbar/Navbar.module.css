@@ -16,16 +16,19 @@
 .subList a:hover { color:#ffffffce}
 .lang img { width:18px; margin-right:4px; }
 .mainNav {
-  display:flex; align-items:center;
-  padding:12px 20px;
+  display: flex;
+  align-items: center;
+  padding: 12px 50px;
   transition: background-color .3s ease;
+  position: relative; /* IMPORTANT */
+  height: 120px;
 }
 .fixed {
   position:fixed; top:0; left:0; width:100%;
   background:rgba(0,0,0,.85); z-index:999;
 }
 .logo img { 
-  height: 80px;
+  height: 70px;
   max-width: 100%;
   width: auto;
   object-fit: contain;
@@ -46,10 +49,24 @@
   background: #e2bf4d;
 }
 .underline {
-  height:1px; background:rgba(255,255,255,.4);
-  margin:0 20px;
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 93%;
+  height: 1px;
+  background: #ffffff;
 }
-
+.underlineText {
+  position: absolute;
+  bottom: 5px;
+  left: 2%;
+  /* transform: translateX(-50%); */
+  color: #CEAB55;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+}
 /* ===== mobile-specific ===== */
 .hamburger {
   display: none;
@@ -140,21 +157,17 @@
   }
 } */
 
-@media (max-width: 500px) {
-  .showIcon {
-    display: none;
-  }
-  .logo img { 
-    height: 65px;
-  }
-}
 
 @media (max-width: 992px) {
+   .mainNav {
+    padding: 12px 30px;
+    height: 110px;
+  }
 
   .logo img { 
-    height: 70px;
+    height: 60px;
   }
-  
+
   /* only hide the main links, keep subNav visible */
   .navList {
     display: none !important;
@@ -189,6 +202,23 @@
   } */
 }
 
+@media (max-width: 600px) {
+  .mainNav {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mainNav {
+    height: 100px;
+  }
+  .showIcon {
+    display: none;
+  }
+  .logo img { 
+    height: 55px;
+  }
+}
 
 
 /* === Dropdown Styles for Main Nav === */
