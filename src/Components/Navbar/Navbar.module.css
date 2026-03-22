@@ -18,10 +18,10 @@
 .mainNav {
   display: flex;
   align-items: center;
-  padding: 12px 50px;
+  padding: 0 50px 12px;
   transition: background-color .3s ease;
   position: relative; /* IMPORTANT */
-  height: 120px;
+  height: 110px;
 }
 .fixed {
   position:fixed; top:0; left:0; width:100%;
@@ -161,8 +161,8 @@
 
 @media (max-width: 992px) {
    .mainNav {
-    padding: 12px 30px;
-    height: 110px;
+    padding: 0 30px 12px;
+    height: 100px;
   }
 
   .underline,
@@ -211,7 +211,7 @@
 
 @media (max-width: 600px) {
   .mainNav {
-    padding: 12px 20px;
+    padding: 0 20px 12px;
   }
   
   .underline,
@@ -223,7 +223,7 @@
 
 @media (max-width: 500px) {
   .mainNav {
-    height: 100px;
+    height: 90px;
   }
   .showIcon {
     display: none;
