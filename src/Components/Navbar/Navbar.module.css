@@ -51,18 +51,16 @@
 .underline {
   position: absolute;
   bottom: 23px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 93%;
+  left: 50px;
+  right: 50px;
   height: 1px;
   background: #ffffff;
 }
 .underlineText {
   position: absolute;
   bottom: 2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 93%;
+  left: 50px;
+  right: 50px;
   color: #CEAB55;
   font-size: 0.95rem;
   font-weight: bold;
@@ -167,6 +165,12 @@
     height: 110px;
   }
 
+  .underline,
+  .underlineText {
+    left: 30px;
+    right: 30px;
+  }
+
   .logo img { 
     height: 60px;
   }
@@ -208,6 +212,12 @@
 @media (max-width: 600px) {
   .mainNav {
     padding: 12px 20px;
+  }
+  
+  .underline,
+  .underlineText {
+    left: 20px;
+    right: 20px;
   }
 }
 
