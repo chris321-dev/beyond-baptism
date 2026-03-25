@@ -9,7 +9,7 @@
 .subNav {
   display: flex;
   justify-content: flex-end;
-  padding: 8px 20px;
+  padding: 8px 50px;
 }
 .subList { display:flex; gap:20px; list-style:none; margin:0; padding:0; }
 .subList a, .lang { color:#fff; font-size:.9rem; text-decoration:none; display: flex; align-items: center;  }
@@ -192,7 +192,7 @@
   .subNav {
     display: flex;
     justify-content: flex-end;
-    padding: 8px 10px !important;
+    padding: 8px 30px !important;
     /*  */
     background-color: rgb(21, 25, 34);
   }
@@ -212,6 +212,10 @@
 @media (max-width: 600px) {
   .mainNav {
     padding: 0 20px 12px;
+  }
+
+  .subNav {
+    padding: 8px 20px;
   }
   
   .underline,
