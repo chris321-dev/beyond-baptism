@@ -72,7 +72,9 @@ const Hero = () => {
 
 
     <section
-      className={styles.hero}
+      key={current} 
+      {/* className={styles.hero} */}
+      className={`${styles.hero} ${styles.fade}`}
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${isMobile && slide.imgMobile ? slide.imgMobile : slide.img})`
       }}
