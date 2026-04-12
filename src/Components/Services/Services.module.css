@@ -120,7 +120,7 @@
   color: #fff;
   border: none;
   border-radius: 25px;
-  padding: 2px 20px;
+  padding: 5px 20px;
   cursor: pointer;
   font-size: 0.95rem;
   display: inline-flex;
@@ -141,9 +141,9 @@
 }
 
 /* Arrow icon in the button */
-.arrowIcon {
+/* .arrowIcon {
   font-size: 1.6rem;
-}
+} */
 
 @media (max-width: 1024px) {
   .servicesCards {
