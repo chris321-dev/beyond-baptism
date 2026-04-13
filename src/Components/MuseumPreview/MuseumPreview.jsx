@@ -138,12 +138,14 @@ const MuseumPreview = () => {
         <div className={styles.gallery} ref={scrollRef}>
           {videoData.map((video) => (
             <div key={video.id} className={styles.card}>
+              <div className={styles.cardBg}>
               <a href={video.link} target="_blank" rel="noopener noreferrer" className={styles.imageWrapper}>
                 <img src={video.image} alt={video.title} />
                 <div className={styles.playOverlay}>
                   <Play size={32} weight="fill" />
                 </div>
               </a>
+              </div>
               <div className={styles.info}>
                 <h4>{video.title}</h4>
                 <p>{video.description}</p>
