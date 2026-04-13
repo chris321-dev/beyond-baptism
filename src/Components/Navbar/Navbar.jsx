@@ -17,7 +17,7 @@ import {
   SignOut
 } from '@phosphor-icons/react';
 import styles from './Navbar.module.css';
-import logo from '../../Assets/Beyond-Baptism-Logo-white-1.png';
+import logo from '../../Assets/beyondBaptismLogoNew.png';
 import icon1 from '../../Assets/USIcon.png';
 
 const Navbar = () => {
@@ -126,14 +126,14 @@ if (
   return (
     <header className={headerClasses}>
       {/* Sub‑nav (stays visible on all sizes) */}
-{/*       <div className={styles.subNav}>
+      <div className={styles.subNav}>
         <ul className={styles.subList}>
           <li><Link to="/"><MagnifyingGlass size={17} />&nbsp;<span className={styles.showIcon}>Search</span></Link></li>
           <li><Link to="/under-construction">|&nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.showIcon}><Newspaper size={17} /></span>&nbsp;Blog</Link></li>
           <li><Link to="/under-construction">|&nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.showIcon}><UserCircle size={17} /></span>&nbsp;Virtual Museum</Link></li>
           <li className={styles.lang}><img src={icon1} alt="EN" />EN</li>
         </ul>
-      </div> */}
+      </div>
 
       {/* Main nav */}
       <div className={navClasses}>
@@ -256,9 +256,13 @@ if (
             <List size={28} weight="bold" />
           </button>
         </div>
+
+        <div className={styles.underline}></div>
+        
+        <div className={styles.underlineText}><h5>Where the Eucharist Transforms Lives and Hearts.</h5></div>
+        
       </div>
 
-      <div className={styles.underline}></div>
 
       {/* Mobile slide‑out menu */}
       {menuOpen && (

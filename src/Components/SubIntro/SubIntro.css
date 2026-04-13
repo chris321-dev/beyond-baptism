@@ -16,7 +16,7 @@
   background-repeat: no-repeat, no-repeat;
 
   /* Position first image lower, second one a bit higher */
-  background-position: left bottom, left 15px; 
+  background-position: left 30px, left 50px;  
   /* first (Vector2) sticks to bottom, second (Vector3) shifted up 40px */
   
   z-index: -1;
@@ -24,7 +24,7 @@
 }
 
 .section {
-  padding-top: 1rem !important;
+  padding-top: 0.8rem !important;
 }
 
 /* Other styles remain the same */
@@ -44,7 +44,7 @@
 }
 
 .subtitle {
-  padding: 20px 0px;
+  padding: 0px 0px 30px;
   font-size: 1.1rem;
   color: #ff8c00;
   font-weight: bold;
@@ -110,8 +110,16 @@
     grid-template-columns: 1fr;
   }
 
+  .sec1::before {
+    background-position: left 15px, left 35px; 
+  }
+
+  .section {
+    padding-top: 0rem !important;
+  }
+
   .subtitle {
-    padding: 0px;
+    padding: 0px 0px 10px;
   }
 
   .title {

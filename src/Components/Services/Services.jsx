@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import s from "./Services.module.css";
-import { Heart
+import { Heart, ArrowUpRightIcon
 } from '@phosphor-icons/react';
 import img2 from '../../Assets/image-4.webp';
 // import img3 from '../../Assets/heartIcon.png';
@@ -43,7 +43,7 @@ function Services() {
         <NavLink to="/parishbenefits">
           <button className={s.cardBtn}>
             <span className={s.btnText}> Discover </span>
-            <span className={s.arrowIcon}>↗</span>
+            <span className={s.arrowIcon}><ArrowUpRightIcon size={18} color="#ffffff" alt="Arrow Icon" /></span>
           </button>
         </NavLink>
       </div>
@@ -68,7 +68,7 @@ function Services() {
         <NavLink to="/volunteer?section=volunteer">
           <button className={s.cardBtn}>
           <span className={s.btnText}> Volunteer </span>
-            <span className={s.arrowIcon}>↗</span>
+            <span className={s.arrowIcon}><ArrowUpRightIcon size={18} color="#ffffff" alt="Arrow Icon" /></span>
           </button>
         </NavLink>
       </div>
@@ -94,7 +94,7 @@ function Services() {
         <NavLink to="/donate?section=donate">
           <button className={s.cardBtn}>
             <span className={s.btnText}> Donate </span>
-            <span className={s.arrowIcon}>↗</span>
+            <span className={s.arrowIcon}><ArrowUpRightIcon size={18} color="#ffffff" alt="Arrow Icon" /></span>
           </button>
         </NavLink>
       </div>

@@ -52,6 +52,19 @@
 }
 
 
+.fade {
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 .timerBar {
   position: absolute;
@@ -62,7 +75,7 @@
   width: 100%;
   transform: scaleX(0);
   transform-origin: left;
-  animation: fillBar 7s linear forwards;
+  animation: fillBar 10s linear forwards;
   z-index: 5;
 }
 

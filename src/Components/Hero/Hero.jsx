@@ -43,7 +43,7 @@ const Hero = () => {
   useEffect(() => {
     const id = setInterval(() => {
       setCurrent((c) => (c + 1) % slides.length);
-    }, 7000);
+    }, 10000);
     return () => clearInterval(id);
   }, []);
 
@@ -72,7 +72,8 @@ const Hero = () => {
 
 
     <section
-      className={styles.hero}
+      key={current}
+      className={`${styles.hero} ${styles.fade}`}
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${isMobile && slide.imgMobile ? slide.imgMobile : slide.img})`
       }}
