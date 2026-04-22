@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Play } from '@phosphor-icons/react'
 import styles from './About.module.css'
 import aboutUsImg from '../../Assets/aboutUs1.webp';
 
-import ContactForm from '../ContactForm/ContactForm';
+// import ContactForm from '../ContactForm/ContactForm';
 
 
 const slides = [
@@ -106,9 +106,9 @@ export default function About() {
         </div>
       </section>
 
-      <hr className={styles.line2} /> 
+      {/* <hr className={styles.line2} /> 
 
-      <ContactForm />
+      <ContactForm /> */}
 
     </>
   )
