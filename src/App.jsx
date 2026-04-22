@@ -84,19 +84,42 @@ function App() {
             <div
               style={{
                 position: "fixed",
-                bottom: 20,
-                left: 20,
-                background: "#000",
-                color: "#fff",
-                padding: "10px 15px",
-                borderRadius: "8px",
-                zIndex: 9999
+                bottom: 16,
+                left: "50%",
+                transform: "translateX(-50%)",
+                background: "#111827", // deep dark 
+                color: "#f9fafb",
+                padding: "10px 14px",
+                borderRadius: "10px",
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                boxShadow: "0 6px 20px rgba(0,0,0,0.25)",
+                zIndex: 9999,
+                fontSize: "13px",
+                border: "1px solid rgba(255,255,255,0.08)"
               }}
             >
-              New version available
+              <span style={{ opacity: 0.9 }}>
+                New update available
+              </span>
+            
               <button
                 onClick={() => window.location.reload()}
-                style={{ marginLeft: 10 }}
+                style={{
+                  background: "#d4af37", // gold 
+                  color: "#111",
+                  border: "none",
+                  padding: "6px 10px",
+                  borderRadius: "6px",
+                  cursor: "pointer",
+                  fontWeight: 600,
+                  fontSize: "12px",
+                  transition: "all 0.2s ease",
+                  animation: "pulse 2s infinite" 
+                }}
+                onMouseOver={(e) => (e.target.style.background = "#b8962e")}
+                onMouseOut={(e) => (e.target.style.background = "#d4af37")}
               >
                 Refresh
               </button>
